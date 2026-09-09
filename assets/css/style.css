@@ -247,3 +247,86 @@ footer {
     font-size: 3rem;
   }
 }
+
+/* Featured Project */
+
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.project-showcase {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  margin-top: 28px;
+}
+
+.project-copy {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 32px;
+}
+
+.research-question {
+  margin: 28px 0;
+  padding: 20px;
+  background: #f7f8fa;
+  border-radius: 12px;
+}
+
+.research-question span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.research-question strong {
+  display: block;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.project-tags {
+  margin-bottom: 22px;
+}
+
+.project-details {
+  display: grid;
+  gap: 16px;
+}
+
+.detail-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.detail-card span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.detail-card h3 {
+  margin: 6px 0 8px;
+}
+
+.detail-card p {
+  margin: 0;
+  color: #4b5563;
+}
+
+@media (max-width: 800px) {
+  .project-showcase {
+    grid-template-columns: 1fr;
+  }
+}
