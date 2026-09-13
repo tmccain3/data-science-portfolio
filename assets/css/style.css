@@ -330,3 +330,197 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+   AI LABOR MARKET PROJECT PAGE
+======================================== */
+
+.project-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+}
+
+.project-hero {
+    padding: 110px 0 90px;
+    max-width: 1000px;
+}
+
+.project-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 18px 0 24px;
+}
+
+.project-intro {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 850px;
+}
+
+.eyebrow,
+.section-number {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4b5563;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.project-tags span {
+    background: #e5e7eb;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.project-section {
+    padding: 75px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.project-section h2 {
+    font-size: 2rem;
+    margin: 15px 0 30px;
+}
+
+.project-section h3 {
+    margin-top: 35px;
+}
+
+.project-section p {
+    max-width: 900px;
+    line-height: 1.75;
+    margin-bottom: 20px;
+}
+
+.research-question {
+    max-width: 900px;
+    padding: 25px 30px;
+    margin-bottom: 35px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.project-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 40px 0 50px;
+}
+
+.project-stats div {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.project-stats strong {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+}
+
+.project-stats span {
+    color: #4b5563;
+}
+
+.occupation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.occupation-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.occupation-card span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #4b5563;
+}
+
+.occupation-card h3 {
+    margin: 10px 0 0;
+}
+
+.project-chart {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 35px 0;
+    border-radius: 10px;
+}
+
+.featured-finding {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.key-takeaway {
+    max-width: 900px;
+    margin-top: 40px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+}
+
+.key-takeaway span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.key-takeaway p {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 10px 0 0;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0 50px;
+}
+
+@media (max-width: 800px) {
+
+    .project-page {
+        padding: 0 20px 60px;
+    }
+
+    .project-hero {
+        padding: 70px 0 60px;
+    }
+
+    .project-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-stats,
+    .occupation-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
