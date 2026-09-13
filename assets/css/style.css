@@ -153,13 +153,13 @@ footer {
 /* Hero redesign */
 
 .hero {
-  padding: 90px 0 80px;
+  padding: 30px 0 50px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 35px;
+  gap: 70px;
   align-items: center;
 }
 
