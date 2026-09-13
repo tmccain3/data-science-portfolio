@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AI Exposure & the NC Labor Market | Teona McCain</title>
-
-    <link rel="stylesheet" href="../../assets/css/style.css">
-</head>
-
-<body>
-
-<nav>
-    <div class="nav-container">
-
-        <a class="logo" href="../../index.html">
-            TEONA MCCAIN
-        </a>
-
-        <div class="nav-links">
-            <a href="../../index.html#about">About</a>
-            <a href="../../index.html#projects">Projects</a>
-            <a href="../../resume.pdf" target="_blank">Resume</a>
-            <a href="https://www.linkedin.com/in/teona-mccain"
-               target="_blank">LinkedIn</a>
-        </div>
-
-    </div>
-</nav>
-
-
 <main class="project-page">
 
     <!-- HERO -->
@@ -39,29 +6,27 @@
 
         <p class="eyebrow">EXPLORATORY DATA ANALYSIS</p>
 
-        <h1>
-            AI Exposure & the North Carolina Labor Market
-        </h1>
+        <h1>AI Exposure & the North Carolina Labor Market</h1>
 
         <p class="project-intro">
-            Exploring how employment, wages, and projected employment
-            growth vary across occupations with different levels of AI
-            exposure in major North Carolina metropolitan labor markets.
+            How do employment, wages, and projected employment growth vary across
+            occupations with different levels of AI exposure in major North Carolina
+            metropolitan labor markets?
         </p>
 
         <div class="project-tags">
             <span>Python</span>
             <span>Pandas</span>
             <span>BLS Data</span>
-            <span>Web Data Retrieval</span>
             <span>EDA</span>
+            <span>Statistics</span>
             <span>Data Visualization</span>
         </div>
 
     </section>
 
 
-    <!-- PROBLEM -->
+    <!-- PROBLEM DEFINITION -->
 
     <section class="project-section">
 
@@ -70,248 +35,415 @@
         <h2>Research Question</h2>
 
         <div class="research-question">
-            How do employment, wages, and projected employment growth
-            vary across occupations with different levels of AI exposure
-            in major North Carolina metropolitan labor markets?
+            How do employment, wages, and projected employment growth vary across
+            occupations with different levels of AI exposure in major North Carolina
+            metropolitan labor markets?
         </div>
 
         <p>
-            When most people think of AI adoption or exposure in the
-            workplace, they often associate it with job loss. As someone
-            who has worked heavily in the technology field while having
-            friends whose occupations range from teachers to dental
-            professionals to graphic designers, I am often asked:
-            “Do you think AI can do my job?”
+            When most people think of AI adoption or exposure in the workplace they
+            often associate it with job loss. As someone who has worked heavily in the
+            tech field while having a friend group with occupations ranging from
+            Teachers to Dentist to Graphic Designers, I am often asked, “Do you think
+            AI can do my job?”. My answer is usually a resounding “NO!”. Of course, I
+            have a slight bias as these are my friends and I believe they are all unique
+            beings that add something nuance to their positions that AI never could. I
+            wholeheartedly believed it could not happen until a close friend of mine
+            working as a graphic designer was laid off and replaced by AI at my own
+            company. If she could be replaced, could my other friends? This led me to
+            my focus on this project.
         </p>
 
         <p>
-            That question became much more real when a close friend
-            working as a graphic designer was laid off and her work was
-            replaced by AI. It made me question whether occupations with
-            greater exposure to AI actually face weaker employment
-            prospects.
+            This analysis examines five occupations ranging from low to very high
+            relative AI exposure across four major North Carolina metropolitan areas
+            using 2025 Bureau of Labor Statistics data.
         </p>
 
         <p>
-            This analysis examines five occupations across four major
-            North Carolina metropolitan areas using 2025 Bureau of Labor
-            Statistics data and national employment projections through
-            2035.
+            The analysis compares current employment and median wages in
+            Charlotte-Concord-Gastonia, Durham-Chapel Hill, Greensboro-High Point,
+            and Raleigh-Cary. It then connects these current labor-market conditions
+            with BLS relative AI exposure categories and national employment
+            projections through 2035.
+        </p>
+
+        <p>
+            The goal of this project is not to necessarily equate AI exposure to job
+            decline or growth but rather to examine whether my friends occupations
+            with lower or greater AI exposure have a stronger or weaker outlook for
+            future employment.
         </p>
 
     </section>
 
 
-    <!-- DATA -->
+    <!-- DATA DESCRIPTION -->
 
     <section class="project-section">
 
-        <p class="section-number">02 — DATA</p>
+        <p class="section-number">02 — DATA DESCRIPTION</p>
 
-        <h2>Five Occupations. Four Labor Markets.</h2>
+        <h2>Data Description</h2>
 
         <p>
-            The analysis combines 2025 Occupational Employment and Wage
-            Statistics with the BLS Artificial Intelligence Exposure
-            Categories and 2025–2035 Employment Projections.
+            This analysis uses two datasets from the U.S. Bureau of Labor Statistics
+            (BLS). The first comes from the 2025 Occupational Employment and Wage
+            Statistics (OEWS) program and provides employment and wage estimates
+            for metropolitan labor markets. The analysis focuses on four North
+            Carolina metropolitan areas: Charlotte-Concord-Gastonia, Durham-Chapel
+            Hill, Greensboro-High Point, and Raleigh-Cary.
         </p>
 
-        <div class="project-stats">
-
-            <div>
-                <strong>5</strong>
-                <span>Occupations</span>
-            </div>
-
-            <div>
-                <strong>4</strong>
-                <span>NC Metro Areas</span>
-            </div>
-
-            <div>
-                <strong>20</strong>
-                <span>Occupation–Metro Observations</span>
-            </div>
-
-            <div>
-                <strong>2025–35</strong>
-                <span>Projection Period</span>
-            </div>
-
-        </div>
-
-        <h3>Selected Occupations</h3>
+        <h3>Five occupations were selected to represent different levels and types of exposure to artificial intelligence:</h3>
 
         <div class="occupation-grid">
 
             <div class="occupation-card">
-                <span>VERY HIGH AI EXPOSURE</span>
+                <span>VERY HIGH</span>
                 <h3>Information Security Analysts</h3>
             </div>
 
             <div class="occupation-card">
-                <span>VERY HIGH AI EXPOSURE</span>
+                <span>VERY HIGH</span>
                 <h3>Graphic Designers</h3>
             </div>
 
             <div class="occupation-card">
-                <span>HIGH AI EXPOSURE</span>
-                <h3>Elementary School Teachers</h3>
+                <span>HIGH</span>
+                <h3>Elementary School Teachers, Except Special Education</h3>
             </div>
 
             <div class="occupation-card">
-                <span>MODERATE AI EXPOSURE</span>
+                <span>MODERATE</span>
                 <h3>Electricians</h3>
             </div>
 
             <div class="occupation-card">
-                <span>LOW AI EXPOSURE</span>
+                <span>LOW</span>
                 <h3>Dental Hygienists</h3>
             </div>
 
         </div>
 
+        <p>
+            The second dataset comes from the BLS Artificial Intelligence Exposure
+            Categories and 2025–2035 Employment Projections. This dataset classifies
+            occupations according to their relative exposure to AI and provides
+            employment projections through 2035.
+        </p>
+
+
+        <h3>Unit of Analysis</h3>
+
+        <p>
+            The primary unit of analysis is an occupation within a North Carolina
+            metropolitan area in 2025. With five occupations across four metropolitan
+            areas, the final dataset contains: 20 occupation–metro observations.
+        </p>
+
+        <p>
+            The AI exposure and employment projection measures are occupation-level
+            measures, so those values repeat across the four metropolitan observations
+            for each occupation.
+        </p>
+
+
+        <h3>Operationalizing AI Exposure</h3>
+
+        <p>
+            In this project, I want to clarify that the AI exposure metric is not the
+            amount of AI used. In actuality, it is BLS's measure of how exposed an
+            occupation's work activities are to AI technologies.
+        </p>
+
+        <p>
+            My BLS data source combines theoretical and observed AI usage metrics to
+            classify occupations into four relevant exposure categories. The data
+            provides a clear picture that greater exposure does not automatically mean
+            that an occupation will lose jobs. This is a vital distinction in my analysis:
+            the project compares AI exposure with current labor-market conditions
+            and projected employment change rather than assuming that exposure
+            represents job displacement.
+        </p>
+
+
+        <h3>Data Quality</h3>
+
+        <p>
+            The original OEWS datasets contained substantially more occupations,
+            geographic areas, and variables than required for my analysis. The data
+            was filtered to the five occupations and four metropolitan areas, producing
+            a balanced dataset of 20 observations.
+        </p>
+
+        <div class="project-stats">
+
+            <div>
+                <strong>0</strong>
+                <span>Missing employment values</span>
+            </div>
+
+            <div>
+                <strong>0</strong>
+                <span>Missing wage values</span>
+            </div>
+
+            <div>
+                <strong>0</strong>
+                <span>Missing AI exposure values</span>
+            </div>
+
+            <div>
+                <strong>0</strong>
+                <span>Duplicate observations</span>
+            </div>
+
+        </div>
+
+        <p>
+            Numeric variables were converted to appropriate numeric data types,
+            unnecessary columns were removed, and BLS column names were
+            renamed to improve readability.
+        </p>
+
     </section>
 
 
-    <!-- FINDING 1 -->
+    <!-- DATA CLEANING -->
 
     <section class="project-section">
 
-        <p class="section-number">03 — CURRENT LABOR MARKET</p>
+        <p class="section-number">03 — DATA CLEANING AND PREPARATION</p>
 
-        <h2>Where Are These Jobs Today?</h2>
+        <h2>Data Cleaning and Preparation</h2>
+
+        <p>
+            The original BLS OEWS datasets contain occupational estimates for
+            hundreds of occupations and geographic areas. I used pandas to reduce the
+            data to the observations and variables relevant to my research question.
+        </p>
+
+        <h3>The cleaning process included:</h3>
+
+        <p>
+            <strong>Geographic filtering:</strong> I filtered the metropolitan dataset to North
+            Carolina and selected Charlotte-Concord-Gastonia, Durham-Chapel
+            Hill, Greensboro-High Point, and Raleigh-Cary.
+        </p>
+
+        <p>
+            <strong>Occupation filtering:</strong> I used SOC occupation codes to select five
+            occupations representing different levels of relative AI exposure.
+            SOC codes were used instead of occupation names to provide a
+            consistent identifier across BLS datasets.
+        </p>
+
+        <p>
+            <strong>Variable selection:</strong> I retained employment, median annual wage,
+            and location quotient from the OEWS dataset and removed variables
+            that were not needed for the analysis.
+        </p>
+
+        <p>
+            <strong>Data type conversion:</strong> Employment, median annual wage, and
+            location quotient were converted to numeric fields so they could be
+            used in calculations and visualizations.
+        </p>
+
+        <p>
+            <strong>Quality checks:</strong> I checked the filtered data for duplicate
+            observations and missing values. The final sample contained no
+            duplicates or missing employment or wage values.
+        </p>
+
+        <p>
+            <strong>Dataset integration:</strong> I joined the OEWS data with the BLS AI
+            Exposure and Employment Projections dataset using the SOC
+            occupation code. This added relative AI exposure and national
+            employment projections for 2025–2035.
+        </p>
+
+        <p>
+            To reiterate, the dataset contains 20 observations, representing five
+            occupations across four North Carolina metropolitan labor markets. Each
+            occupation has a complete observation for every selected metro area.
+        </p>
+
+        <p>
+            One thing I would like to mention is during initial exploration, I decided to
+            move away from looking at occupations that are most likely to be effected
+            by AI and chose occupations with more variance to each other to give a
+            more realistic view of the workforce as whole. I leaned toward my friends
+            occupations as they gave greater diversity to my dataset and visuals. Also,
+            one candidate occupation (computer programmers) contained a
+            suppressed metropolitan wage estimate. Rather than disregarding or
+            keeping missing values that BLS did not report on the analytical level I was
+            looking at (it only had median and means on a state level), I selected an
+            alternative occupation with complete observations across all four
+            metropolitan areas. This preserved a balanced dataset and avoided
+            introducing geographically inconsistent values into the analysis.
+        </p>
+
+    </section>
+
+
+    <!-- VISUALIZATIONS -->
+
+    <section class="project-section">
+
+        <p class="section-number">04 — VISUALIZATIONS & INSIGHTS</p>
+
+        <h2>Employment Heat Map</h2>
 
         <img
             class="project-chart"
             src="heatmap.png"
-            alt="Heat map showing 2025 employment across selected North Carolina metropolitan areas"
+            alt="2025 Employment Across Selected North Carolina Metropolitan Areas"
         >
 
         <p>
-            Employment varies considerably across both occupation and
-            metropolitan area. Charlotte-Concord-Gastonia has the
-            largest combined employment across the five selected
-            occupations, followed by Raleigh-Cary.
+            Employment varies considerably across both occupation and metropolitan
+            areas. Charlotte-Concord-Gastonia has the largest combined employment
+            across the five selected occupations, while Raleigh-Cary has the second-largest
+            concentration. Elementary School Teachers represent the largest
+            occupation in each market, including approximately 10,770 workers in
+            Charlotte and 5,830 in Raleigh-Cary.
         </p>
 
         <p>
-            Elementary School Teachers represent the largest occupation
-            in each market, while Information Security Analyst
-            employment is considerably more concentrated in Charlotte
-            and Raleigh than in Greensboro-High Point.
+            The heat map also highlights differences within individual occupations.
+            Information Security Analyst employment is substantially higher in
+            Charlotte and Raleigh than in Greensboro-High Point, suggesting that
+            current opportunities for highly AI-exposed occupations are not distributed
+            evenly across North Carolina's major labor markets.
         </p>
 
-    </section>
 
-
-    <!-- FINDING 2 -->
-
-    <section class="project-section">
-
-        <p class="section-number">04 — WAGES</p>
-
-        <h2>Occupation Matters More Than Geography</h2>
+        <h2>Median Annual Wage Grouped Bar Chart</h2>
 
         <img
             class="project-chart"
             src="bar_chart.png"
-            alt="Grouped bar chart comparing median annual wages"
+            alt="2025 Median Annual Wages Across Selected North Carolina Metropolitan Areas"
         >
 
         <p>
-            Information Security Analysts have the highest median wages
-            across all four metropolitan areas, reaching approximately
+            Wage differences are more strongly associated with occupation than
+            geography in this sample. Information Security Analysts have the highest
+            median wages across all four metropolitan areas, reaching approximately
             $143,640 in Raleigh-Cary.
         </p>
 
         <p>
-            Raleigh-Cary also has the highest average median wage across
-            the five occupations at approximately $84,222, compared with
-            approximately $72,312 in Greensboro-High Point.
+            Dental Hygienists form the second-highest wage group, while Electricians,
+            Graphic Designers, and Elementary School Teachers generally have median
+            wages near $50,000–$64,000. Raleigh-Cary has the highest average median
+            wage across the five selected occupations at approximately $84,222,
+            compared with approximately $72,312 in Greensboro-High Point.
         </p>
 
-    </section>
 
-
-    <!-- FINDING 3 -->
-
-    <section class="project-section">
-
-        <p class="section-number">05 — EMPLOYMENT & WAGES</p>
-
-        <h2>Different Occupations, Different Labor Markets</h2>
+        <h2>Employment vs. Wages Scatterplot</h2>
 
         <img
             class="project-chart"
             src="scatterplot.png"
-            alt="Employment versus median annual wage by AI exposure and metro area"
+            alt="Employment vs. Median Annual Wage by AI Exposure and Metro Area"
         >
 
         <p>
-            Employment size and wages do not move together uniformly.
-            Elementary School Teachers have the largest employment
-            counts but comparatively moderate wages, while Information
-            Security Analysts have much smaller employment levels and
-            substantially higher wages.
+            The relationship between employment size and wages is not uniform
+            across occupations. Elementary School Teachers have the largest
+            employment counts but comparatively moderate wages, while Information
+            Security Analysts have much smaller employment levels and substantially
+            higher wages.
         </p>
 
         <p>
-            Breaking the analysis into individual metropolitan areas
-            also shows that workers in the same occupation encounter
-            different labor-market conditions depending on where they
-            work.
+            The occupations form visually distinct groups based on their employment
+            and wage characteristics. This suggests that labor-market conditions differ
+            substantially by occupation even before considering AI exposure.
+        </p>
+
+
+        <h2>AI Exposure vs. Future Employment Scatterplot</h2>
+
+        <img
+            class="project-chart"
+            src="exposure_chart.png"
+            alt="AI Exposure vs. Projected Employment Change 2025–2035"
+        >
+
+        <p>
+            The relationship between AI exposure and projected employment growth is
+            not consistent across the five occupations. Employment growth is projected
+            at 8.0% for Dental Hygienists with Low AI exposure and 9.2% for
+            Electricians with Moderate exposure. Elementary School Teachers,
+            classified as High exposure, are projected to remain relatively stable at
+            −0.4%.
+        </p>
+
+        <p>
+            The most striking difference occurs among occupations with Very High AI
+            exposure. Graphic Designers are projected to decline by 1.7%, while
+            Information Security Analysts are projected to grow by 21.0% between
+            2025 and 2035.
+        </p>
+
+        <p>
+            This variation within the same AI exposure category suggests that AI
+            exposure alone is not sufficient to explain an occupation's projected
+            employment outlook. Other characteristics of the occupation and broader
+            labor-market demand are also likely important.
         </p>
 
     </section>
 
 
-    <!-- MAIN AI FINDING -->
+    <!-- STORYTELLING -->
 
-    <section class="project-section featured-finding">
+    <section class="project-section">
 
-        <p class="section-number">06 — AI EXPOSURE & THE FUTURE</p>
+        <p class="section-number">05 — STORYTELLING & NARRATIVE</p>
 
-        <h2>Higher AI Exposure Does Not Automatically Mean Fewer Jobs</h2>
-
-        <img
-            class="project-chart"
-            src="exposure_chart.png"
-            alt="AI exposure versus projected employment change from 2025 through 2035"
-        >
+        <h2>Storytelling & Narrative</h2>
 
         <p>
-            The relationship between AI exposure and projected
-            employment growth is not consistent across the five
-            occupations.
+            Good news for my friends, the results suggest that AI exposure alone does
+            not determine whether an occupation is likely to grow or decline. The five
+            occupations in this analysis represent four levels of relative AI exposure,
+            yet their current labor-market conditions and projected employment
+            trends vary substantially.
         </p>
 
         <p>
-            The strongest contrast occurs among occupations with
-            <strong>Very High AI exposure</strong>. Graphic Designers
-            are projected to decline by approximately
-            <strong>1.7%</strong>, while Information Security Analysts
-            are projected to grow by approximately
-            <strong>21.0%</strong> between 2025 and 2035.
+            The clearest example is the comparison between Information Security
+            Analysts and Graphic Designers. Both are classified by BLS as having Very
+            High AI exposure, but their projected outcomes are very different.
+            Information Security Analysts have the highest average median wage in
+            the selected North Carolina markets at approximately $127,178 and are
+            projected to grow nationally by 21.0% between 2025 and 2035. Graphic
+            Designers, despite having the same AI exposure classification, have an
+            average median wage of approximately $60,083 and projected employment
+            change of −1.7%.
         </p>
 
         <p>
-            Dental Hygienists with Low exposure are projected to grow
-            8.0%, Electricians with Moderate exposure by 9.2%, and
-            Elementary School Teachers with High exposure are projected
-            to remain relatively stable at −0.4%.
+            The pattern is not straightforward at lower exposure levels either. Dental
+            Hygienists, classified as Low AI exposure, are projected to grow by 8.0%,
+            while Electricians, with Moderate exposure, are projected to grow by 9.2%.
+            Elementary School Teachers have High exposure but a relatively stable
+            projected outlook of −0.4%.
         </p>
 
-        <div class="key-takeaway">
-
-            <span>KEY TAKEAWAY</span>
-
-            <p>
-                AI exposure alone is not sufficient to explain an
-                occupation's projected employment outlook.
-            </p>
-
-        </div>
+        <p>
+            Geography also matters. Among the five occupations studied, Charlotte-Concord-Gastonia
+            has the largest combined employment, while Raleigh-Cary has the highest average median
+            wage and the greatest average occupational concentration. This suggests that workers in
+            the same occupation may encounter different labor-market conditions depending on
+            where they work within North Carolina.
+        </p>
 
     </section>
 
@@ -320,34 +452,38 @@
 
     <section class="project-section">
 
-        <p class="section-number">07 — CONCLUSION</p>
+        <p class="section-number">06 — CONCLUSION</p>
 
-        <h2>So, Are the Jobs Safe?</h2>
+        <h2>Conclusion</h2>
 
         <p>
-            After looking at the data, I have something important to
-            communicate to my friends:
-            <strong>
-                I don't know if your jobs are safe, but AI exposure may
-                not play as large a role as we initially thought.
-            </strong>
+            After looking at the data, I have something very important to communicate
+            to my friends. “I don’t know if your jobs are safe but AI exposure may not
+            play as big of a role as we may have thought.” The analysis does not
+            support a simple conclusion that greater AI exposure means fewer future
+            jobs. Instead, occupations with identical or similar exposure levels can
+            have very different wages, employment concentrations, and projected
+            growth.
         </p>
 
         <p>
-            Occupations with identical or similar AI exposure can have
-            very different wages, employment concentrations, and
-            projected growth. AI exposure appears to be one piece of a
-            much larger labor-market picture involving the nature of the
-            work, labor demand, geography, skills, and broader economic
-            conditions.
+            AI exposure appears to be one piece of a much larger labor-market picture.
+            The results suggest that the type of work being performed, demand for the
+            occupation, geographic labor-market conditions, and other economic
+            factors remain important when considering how occupations may evolve
+            alongside AI.
         </p>
 
+
+        <h3>What We Cannot Conclude</h3>
+
         <p>
-            This analysis does not establish that AI causes employment
-            growth or decline. BLS AI exposure measures the relative
-            potential for AI to interact with occupational tasks, while
-            employment projections incorporate many other economic and
-            labor-market factors.
+            In this research I have found that, this analysis does not establish that AI
+            causes employment growth or decline. The BLS AI exposure categories
+            measure the relative potential for AI to interact with occupational tasks,
+            while the 2025–2035 employment projections incorporate many economic
+            and labor-market factors. Therefore, differences in projected employment
+            should not be interpreted as the direct effect of AI.
         </p>
 
     </section>
@@ -357,33 +493,113 @@
 
     <section class="project-section">
 
-        <p class="section-number">08 — LIMITATIONS & REFLECTION</p>
+        <p class="section-number">07 — LIMITATIONS, ETHICS & REFLECTION</p>
 
-        <h2>What the Data Cannot Tell Us</h2>
+        <h2>Limitations, Ethics & Reflection</h2>
+
+        <h3>Limitations</h3>
 
         <p>
-            This analysis includes only five occupations and four
-            metropolitan areas and should not be generalized to the
-            entire North Carolina workforce.
+            This analysis provides a snapshot of selected North Carolina
+            labor markets, but several limitations should be considered when
+            interpreting the results.
         </p>
 
         <p>
-            Current employment and wage estimates are specific to the
-            selected North Carolina metropolitan areas, while the
-            2025–2035 employment projections are national.
+            First, the analysis includes only five occupations and four metropolitan
+            areas. The occupations were intentionally selected to represent different
+            levels of AI exposure and different types of work from my friends jobs,
+            rather than to represent the entire North Carolina workforce. The findings
+            therefore should not be generalized to all occupations or geographic areas
+            in the state.
         </p>
 
         <p>
-            Most importantly, AI exposure is not the same as actual AI
-            adoption or job displacement. It measures the relative
-            potential for AI to interact with occupational tasks.
+            Second, the geographic and projection data operate at different levels.
+            Current employment and wage estimates are specific to the four selected
+            North Carolina metropolitan areas, while the 2025–2035 employment
+            projections are national. The projected growth rates therefore describe the
+            expected national outlook for each occupation and should not be
+            interpreted as forecasts specifically for Charlotte, Raleigh, Durham, or
+            Greensboro.
         </p>
 
         <p>
-            In a future extension of this project, I would expand the
-            number of occupations and labor markets, examine changes
-            across multiple years, and incorporate measures of actual
-            workplace AI adoption.
+            Most importantly, AI exposure is not the same as AI adoption or job
+            displacement. The BLS exposure categories describe the relative potential
+            for AI to interact with tasks performed within an occupation. They do not
+            indicate how frequently workers currently use AI or the probability that
+            workers will be replaced by AI.
+        </p>
+
+
+        <h3>Ethics</h3>
+
+        <p>
+            AI and employment are topics that can easily be presented in ways
+            that create unnecessary fear or misleading conclusions. For this reason, I
+            avoided interpreting high AI exposure as evidence that an occupation is
+            disappearing. As I stated previously the only honest answer I can give me
+            friends is “I don’t know”.
+        </p>
+
+        <p>
+            The results themselves demonstrate why this distinction matters.
+            Information Security Analysts and Graphic Designers are both classified as
+            having Very High AI exposure, yet BLS projects substantially different
+            employment trajectories for the two occupations. Presenting AI exposure
+            as equivalent to job-loss risk would therefore misrepresent both the
+            exposure measure and the employment projections.
+        </p>
+
+        <p>
+            I also avoided filling suppressed or unavailable BLS estimates with
+            invented values during data preparation. Occupations were selected based
+            partly on the availability of complete observations across the four
+            metropolitan areas so that comparisons could be made using reported
+            data.
+        </p>
+
+
+        <h3>Reflection</h3>
+
+        <p>
+            One of the most interesting findings from this project was that
+            the relationship between AI and employment appears more complicated
+            than the common assumption that greater AI exposure automatically
+            means fewer jobs.
+        </p>
+
+        <p>
+            What really surprised me about this project is the fact that it did not give
+            me a clear answer on the exposure of AI and how its relates to employment
+            and wages. Many factors attribute to the gain and loss of North Carolina’s
+            job market. Most people make the assumption that AI exposure means they
+            can be replaced but the future is not set in stone just yet.
+        </p>
+
+        <p>
+            Information Security Analysts provide the strongest example. Despite
+            having Very High relative AI exposure, the occupation has the highest
+            average median wage among the occupations I analyzed and is projected to
+            grow nationally by approximately 21% through 2035. At the same time,
+            Graphic Designers share the same AI exposure category but have a slightly
+            negative projected employment outlook.
+        </p>
+
+        <p>
+            This suggests that AI may affect occupations differently depending on the
+            nature of the work, labor demand, required skills, and other economic
+            factors. The effect of AI seems to be on a case by case basis.
+        </p>
+
+        <p>
+            In the second part of this project, I have considered expanding the analysis
+            to more occupations and North Carolina labor markets and examine
+            changes across multiple years. I would also like to incorporate measures of
+            actual workplace AI adoption, which would allow me to distinguish
+            between occupations that are theoretically exposed to AI and occupations
+            where AI tools are already being widely used.
         </p>
 
     </section>
@@ -393,20 +609,34 @@
 
     <section class="project-section">
 
-        <p class="section-number">09 — CODE & SOURCES</p>
+        <p class="section-number">08 — CODE & TRANSPARENCY</p>
 
-        <h2>Explore the Analysis</h2>
+        <h2>Code & Transparency</h2>
 
         <p>
-            The complete Python analysis includes programmatic BLS data
-            retrieval, pandas cleaning and integration, exploratory data
-            analysis, and visualization.
+            All Python code used to collect, clean, merge, analyze, and visualize the
+            data for this project is available through the project's GitHub
+            repository/Jupyter Notebook.
+        </p>
+
+        <p>The analysis was completed using Python, with:</p>
+
+        <ul>
+            <li>pandas for data cleaning, filtering, merging, and descriptive analysis</li>
+            <li>requests for programmatic retrieval of BLS data</li>
+            <li>matplotlib and seaborn for visualization</li>
+            <li>zip file and io for processing BLS files directly in Python</li>
+        </ul>
+
+        <p>
+            The original data were obtained from the U.S. Bureau of Labor Statistics
+            (BLS) Occupational Employment and Wage Statistics and Employment
+            Projections programs.
         </p>
 
         <div class="project-buttons">
 
-            <a class="button primary"
-               href="analysis.ipynb">
+            <a class="button primary" href="analysis.ipynb">
                 View Python Notebook
             </a>
 
@@ -419,27 +649,106 @@
             <a class="button"
                href="https://www.bls.gov/emp/publications/ai-exposure-categories.htm"
                target="_blank">
-                BLS AI Exposure Data
+                BLS AI Exposure
             </a>
 
         </div>
 
-        <h3>AI Transparency</h3>
+
+        <h3>AI Usage Disclosure</h3>
 
         <p>
-            I used OpenAI ChatGPT (GPT-5.6 Sol) as a support tool to
-            brainstorm and refine the research question, troubleshoot
-            Python errors, explain code, assist with website development,
-            and improve the clarity and organization of written
-            interpretations. I independently selected the research topic,
-            evaluated the data sources, made analytical decisions,
-            executed and reviewed the code, evaluated the visualizations,
-            and determined the final conclusions.
+            Generative AI Disclosure: I used OpenAI ChatGPT (GPT-5.6 Sol)as a support
+            tool during this project. I used it to help brainstorm and refine the research
+            question, troubleshoot Python errors, explain code, assist with website
+            development, and improve the clarity and organization of written
+            interpretations. I independently selected the research topic, evaluated the
+            data sources, made decisions regarding occupation and geographic
+            selection, created, executed and reviewed the Python code, evaluated the
+            resulting visualizations, and determined the final analytical conclusions.
+            All statistical results presented in this project are based on data retrieved
+            from the U.S. Bureau of Labor Statistics.
+        </p>
+
+    </section>
+
+
+    <!-- SOURCES -->
+
+    <section class="project-section">
+
+        <p class="section-number">09 — SOURCES</p>
+
+        <h2>Data Sources</h2>
+
+        <p>
+            U.S. Bureau of Labor Statistics. (2026). Occupational Employment and
+            Wage Statistics: May 2025.
+        </p>
+
+        <p>
+            <a href="https://www.bls.gov/oes/tables.htm" target="_blank">
+                https://www.bls.gov/oes/tables.htm
+            </a>
+        </p>
+
+        <p>
+            U.S. Bureau of Labor Statistics. (2026). Artificial Intelligence (AI) Exposure
+            Categories.
+        </p>
+
+        <p>
+            Used for relative AI exposure classifications and 2025–2035 national
+            occupational employment projections.
+        </p>
+
+        <p>
+            <a href="https://www.bls.gov/emp/ind-occ-matrix/ai-exposure-categories.xlsx"
+               target="_blank">
+                https://www.bls.gov/emp/ind-occ-matrix/ai-exposure-categories.xlsx
+            </a>
+        </p>
+
+
+        <h2>Peer-Reviewed Sources</h2>
+
+        <p>
+            Jetha et al. — Systematic Reviews AI's potential effects on employment and
+            working conditions.
+        </p>
+
+        <p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12754963/"
+               target="_blank">
+                https://pmc.ncbi.nlm.nih.gov/articles/PMC12754963/
+            </a>
+        </p>
+
+        <p>
+            Frank, Ahn, & Moro (2025) — PNAS Nexus AI exposure and
+            unemployment risk; especially useful for showing that individual exposure
+            measures don't tell the whole story.
+        </p>
+
+        <p>
+            <a href="https://academic.oup.com/pnasnexus/article/4/4/pgaf107/8104152"
+               target="_blank">
+                https://academic.oup.com/pnasnexus/article/4/4/pgaf107/8104152
+            </a>
+        </p>
+
+        <p>
+            Felten, Raj, & Seamans (2021) — Strategic Management Journal
+            Development and validation of occupational AI-exposure measures.
+        </p>
+
+        <p>
+            <a href="https://sms.onlinelibrary.wiley.com/doi/10.1002/smj.3286"
+               target="_blank">
+                https://sms.onlinelibrary.wiley.com/doi/10.1002/smj.3286
+            </a>
         </p>
 
     </section>
 
 </main>
-
-</body>
-</html>
