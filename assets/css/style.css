@@ -524,3 +524,36 @@ footer {
     }
 
 }
+.focus-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.focus-stats > div {
+    background: white;
+    border: 1px solid #dfe3e8;
+    border-radius: 14px;
+    padding: 18px 14px;
+    text-align: center;
+}
+
+.focus-stats strong {
+    display: block;
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+    color: #1f2937;
+}
+
+.focus-stats span {
+    display: block;
+    font-size: 0.9rem;
+    color: #667085;
+}
+
+@media (max-width: 700px) {
+    .focus-stats {
+        grid-template-columns: 1fr;
+    }
+}
