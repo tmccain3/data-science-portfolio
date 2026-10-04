@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
-<title>AI Adoption & Business Revenue Change | Teona McCain</title>
+<title>Predicting Business AI Adoption | Teona McCain</title>
 
 <link rel="stylesheet" href="../../assets/css/style.css">
 
@@ -240,6 +240,123 @@
         margin-bottom: 0;
     }
 
+    .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin: 30px 0;
+    }
+
+    .metric-card {
+        background: #ffffff;
+        border: 1px solid #dfe3e8;
+        border-radius: 14px;
+        padding: 26px;
+    }
+
+    .metric-card strong {
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    .metric-card span {
+        color: #667085;
+        line-height: 1.5;
+    }
+
+    .performance-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        border: 1px solid #dfe3e8;
+        border-radius: 14px;
+        overflow: hidden;
+        margin: 30px 0;
+    }
+
+    .performance-table th,
+    .performance-table td {
+        padding: 15px 18px;
+        border-bottom: 1px solid #e5e7eb;
+        text-align: left;
+    }
+
+    .performance-table th {
+        background: #f7f8fa;
+        font-size: 0.82rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .performance-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .bar-chart {
+        background: #ffffff;
+        border: 1px solid #dfe3e8;
+        border-radius: 14px;
+        padding: 28px;
+        margin: 30px 0;
+        max-width: 930px;
+    }
+
+    .bar-row {
+        margin-bottom: 22px;
+    }
+
+    .bar-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7px;
+        font-size: 0.92rem;
+    }
+
+    .bar-track {
+        height: 14px;
+        background: #e5e7eb;
+        border-radius: 999px;
+        overflow: hidden;
+    }
+
+    .bar-fill {
+        height: 100%;
+        background: #1f2937;
+        border-radius: 999px;
+    }
+
+    .importance-list {
+        background: #ffffff;
+        border: 1px solid #dfe3e8;
+        border-radius: 14px;
+        padding: 28px 32px;
+        max-width: 930px;
+        margin: 30px 0;
+    }
+
+    .importance-item {
+        display: grid;
+        grid-template-columns: minmax(180px, 1fr) 90px;
+        gap: 20px;
+        align-items: center;
+        padding: 13px 0;
+        border-bottom: 1px solid #edf0f2;
+    }
+
+    .importance-item:last-child {
+        border-bottom: none;
+    }
+
+    .importance-name {
+        line-height: 1.4;
+    }
+
+    .importance-value {
+        font-weight: 700;
+        text-align: right;
+    }
+
     .reflection-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -286,6 +403,19 @@
         opacity: 0.9;
     }
 
+    .source-card {
+        background: #ffffff;
+        border: 1px solid #dfe3e8;
+        border-radius: 14px;
+        padding: 28px 32px;
+        max-width: 930px;
+        margin-bottom: 18px;
+    }
+
+    .source-card p:last-child {
+        margin-bottom: 0;
+    }
+
     body {
         background: #eef1f4;
     }
@@ -315,8 +445,22 @@
         .two-column,
         .model-grid,
         .reflection-grid,
-        .project-stats {
+        .project-stats,
+        .metric-grid {
             grid-template-columns: 1fr;
+        }
+
+        .importance-item {
+            grid-template-columns: 1fr;
+            gap: 5px;
+        }
+
+        .importance-value {
+            text-align: left;
+        }
+
+        .performance-table {
+            font-size: 0.85rem;
         }
 
     }
@@ -328,880 +472,1706 @@
 
 <body>
 
-```
 <!-- NAVIGATION -->
 
 <nav>
 
-    <div class="nav-container">
+```
+<div class="nav-container">
 
-        <a class="logo" href="../../index.html">
-            TEONA MCCAIN
+    <a class="logo" href="../../index.html">
+        TEONA MCCAIN
+    </a>
+
+    <div class="nav-links">
+
+        <a href="../../index.html#about">
+            About
         </a>
 
-        <div class="nav-links">
+        <a href="../../index.html#projects">
+            Projects
+        </a>
 
-            <a href="../../index.html#about">
-                About
-            </a>
+        <a href="../../resume.pdf" target="_blank">
+            Resume
+        </a>
 
-            <a href="../../index.html#projects">
-                Projects
-            </a>
+        <a href="https://www.linkedin.com/in/teona-mccain"
+           target="_blank">
+            LinkedIn
+        </a>
 
-            <a href="../../resume.pdf" target="_blank">
-                Resume
-            </a>
+    </div>
 
-            <a href="https://www.linkedin.com/in/teona-mccain"
-               target="_blank">
-                LinkedIn
-            </a>
+</div>
+```
 
+</nav>
+
+<main class="project-page">
+
+<!-- HERO -->
+
+<section class="project-hero">
+
+```
+<p class="eyebrow">
+    MACHINE LEARNING
+</p>
+
+<h1>
+    Predicting Business AI Adoption
+</h1>
+
+<p class="project-intro">
+    Can business characteristics be used to predict how likely a group of
+    businesses is to report using artificial intelligence?
+</p>
+
+<div class="project-tags">
+
+    <span>Python</span>
+    <span>Pandas</span>
+    <span>Scikit-learn</span>
+    <span>Machine Learning</span>
+    <span>Gradient Boosting</span>
+    <span>Feature Engineering</span>
+    <span>Cross-Validation</span>
+    <span>Error Analysis</span>
+    <span>Data Visualization</span>
+
+</div>
+```
+
+</section>
+
+<!-- PROBLEM DEFINITION -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        01 — PROBLEM DEFINITION
+    </p>
+
+    <h2>
+        Research Question
+    </h2>
+
+</div>
+
+
+<div class="research-question">
+
+    Can a machine-learning model predict the percentage of businesses
+    reporting AI use based on business characteristics such as industry
+    sector, employee size, and other survey measures?
+
+</div>
+
+
+<div class="story-card">
+
+    <p>
+        Artificial intelligence adoption has become an important indicator
+        of how businesses are changing the way they operate. However, AI
+        adoption is not distributed evenly across businesses. Industry,
+        firm size, business conditions, and other characteristics can all
+        be associated with whether businesses report using AI.
+    </p>
+
+    <p>
+        This project uses the U.S. Census Bureau's Business Trends and
+        Outlook Survey (BTOS) to develop a machine-learning approach for
+        predicting AI-use percentages across business groups.
+    </p>
+
+    <p>
+        Rather than predicting a simple yes-or-no outcome for an individual
+        business, the model predicts the percentage distribution of three
+        survey responses within each business group: <strong>Yes</strong>,
+        <strong>No</strong>, and <strong>Do not know</strong>.
+    </p>
+
+</div>
+
+
+<div class="project-stats">
+
+    <div>
+
+        <strong>
+            89
+        </strong>
+
+        <span>
+            Business groups evaluated
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <strong>
+            3
+        </strong>
+
+        <span>
+            Predicted response categories
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <strong>
+            100%
+        </strong>
+
+        <span>
+            Prediction total for every group
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <strong>
+            2.10
+        </strong>
+
+        <span>
+            Final model MAE
+        </span>
+
+    </div>
+
+</div>
+
+
+<p>
+    Each prediction group is defined by a combination of sector and
+    employee-size category. The final prediction table contains 89 unique
+    groups with no duplicate group combinations.
+</p>
+```
+
+</section>
+
+<!-- BACKGROUND -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        02 — BACKGROUND &amp; CONTEXT
+    </p>
+
+    <h2>
+        Why Business AI Adoption Matters
+    </h2>
+
+</div>
+
+
+<p>
+    Measuring AI adoption is important because businesses do not adopt
+    emerging technologies at the same rate. Recent Census Bureau research
+    using BTOS data shows meaningful differences in AI use across industries
+    and firm sizes. The Census Bureau's current BTOS AI data also tracks
+    how businesses use AI and how adoption varies by business characteristics.
+</p>
+
+
+<p>
+    Earlier BTOS research found that AI use was concentrated in particular
+    sectors and was more common among larger businesses. More recent
+    research continues to show that firm size and industry are important
+    dimensions of AI diffusion.
+</p>
+
+
+<p>
+    The broader research literature also suggests that AI adoption is
+    connected to complementary resources such as digital infrastructure,
+    skills, management capabilities, and firm characteristics. This makes
+    sector and employee size reasonable variables to consider when building
+    a predictive model.
+</p>
+
+
+<div class="content-grid two-column">
+
+    <div class="content-card">
+
+        <h3>
+            Why Machine Learning?
+        </h3>
+
+        <p>
+            Traditional descriptive analysis can show differences in AI
+            adoption across groups. A machine-learning model goes one step
+            further by learning patterns from multiple variables and using
+            those patterns to generate predictions for groups with known
+            characteristics.
+        </p>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h3>
+            What the Model Is Not
+        </h3>
+
+        <p>
+            This model is predictive rather than causal. A feature that is
+            useful for prediction is not necessarily causing businesses to
+            adopt AI. Feature importance should therefore be interpreted as
+            evidence of predictive contribution, not proof of a causal
+            relationship.
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- DATA DESCRIPTION -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        03 — DATA DESCRIPTION
+    </p>
+
+    <h2>
+        Business Trends and Outlook Survey
+    </h2>
+
+</div>
+
+
+<p>
+    The primary data source for this project is the U.S. Census Bureau's
+    Business Trends and Outlook Survey (BTOS). BTOS is an ongoing survey
+    designed to provide timely information about business conditions,
+    expectations, revenue, employment, and other characteristics of U.S.
+    businesses.
+</p>
+
+
+<p>
+    The Census Bureau has also incorporated AI-related questions into BTOS
+    to measure business use of artificial intelligence. The survey provides
+    a useful source for examining differences in AI adoption across
+    industries and firm-size categories.
+</p>
+
+
+<h3>
+    Unit of Analysis
+</h3>
+
+<p>
+    The modeling data are organized around business groups rather than
+    individual survey respondents. Each row represents a unique combination
+    of <strong>Sector</strong> and <strong>Empsize</strong>.
+</p>
+
+
+<div class="content-grid two-column">
+
+    <div class="content-card">
+
+        <h3>
+            Predictor Information
+        </h3>
+
+        <ul>
+
+            <li>Business sector</li>
+
+            <li>Employee-size category</li>
+
+            <li>Additional numeric survey measures describing business conditions</li>
+
+            <li>Additional categorical or encoded business characteristics used by the model</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h3>
+            Target Variables
+        </h3>
+
+        <p>
+            The model predicts three related outcomes:
+        </p>
+
+        <ul>
+
+            <li>Percentage reporting <strong>Yes</strong></li>
+
+            <li>Percentage reporting <strong>No</strong></li>
+
+            <li>Percentage reporting <strong>Do not know</strong></li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+<div class="callout">
+
+    <span class="callout-label">
+        TARGET STRUCTURE
+    </span>
+
+    <p>
+        The three predicted percentages are constrained to represent a
+        complete distribution. For every group, Pred_Yes + Pred_No +
+        Pred_Do_not_know = 100.
+    </p>
+
+</div>
+
+
+<p>
+    The final prediction table contains 89 groups. Validation checks found
+    zero duplicate groups, and every prediction row totals exactly 100.0.
+</p>
+```
+
+</section>
+
+<!-- DATA UNDERSTANDING -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        04 — DATA UNDERSTANDING &amp; EXPLORATION
+    </p>
+
+    <h2>
+        Understanding the Adoption Patterns
+    </h2>
+
+</div>
+
+
+<p>
+    Exploratory analysis showed that AI adoption varies substantially
+    across business groups. The predicted distributions provide a useful
+    way to see how the expected share of businesses reporting AI use changes
+    across sector and employee-size combinations.
+</p>
+
+
+<p>
+    The prediction table contains examples ranging from relatively low
+    predicted AI use to substantially higher predicted adoption. For
+    example, the final prediction output includes groups with predicted
+    Yes values around 14% as well as groups approaching 44%.
+</p>
+
+
+<div class="bar-chart">
+
+    <h3>
+        Example Predicted AI Use
+    </h3>
+
+
+    <div class="bar-row">
+
+        <div class="bar-label">
+            <span>Sector 23 / Size A</span>
+            <strong>14.4%</strong>
+        </div>
+
+        <div class="bar-track">
+            <div class="bar-fill" style="width: 14.4%;"></div>
         </div>
 
     </div>
 
-</nav>
 
+    <div class="bar-row">
 
-<main class="project-page">
-
-
-    <!-- HERO -->
-
-    <section class="project-hero">
-
-        <p class="eyebrow">
-            STATISTICAL ANALYSIS
-        </p>
-
-        <h1>
-            AI Adoption &amp; Business Revenue Change
-        </h1>
-
-        <p class="project-intro">
-            Does greater AI adoption correspond with changes in business revenue,
-            and does that relationship remain after accounting for employee size,
-            industry sector, and time period?
-        </p>
-
-        <div class="project-tags">
-
-            <span>Python</span>
-
-            <span>Pandas</span>
-
-            <span>Statistical Analysis</span>
-
-            <span>Regression</span>
-
-            <span>OLS</span>
-
-            <span>Robust Standard Errors</span>
-
-            <span>Clustered Standard Errors</span>
-
-            <span>Data Visualization</span>
-
+        <div class="bar-label">
+            <span>Sector 23 / Size E</span>
+            <strong>26.0%</strong>
         </div>
 
-    </section>
-
-
-
-    <!-- OVERVIEW -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                01 — PROJECT OVERVIEW
-            </p>
-
-            <h2>
-                Research Question
-            </h2>
-
+        <div class="bar-track">
+            <div class="bar-fill" style="width: 26%;"></div>
         </div>
 
+    </div>
 
-        <div class="research-question">
 
-            Is there a statistically significant relationship between AI adoption
-            and business revenue change after controlling for employee size,
-            sector, and time period?
+    <div class="bar-row">
 
+        <div class="bar-label">
+            <span>Sector XX / Size E</span>
+            <strong>30.9%</strong>
         </div>
 
-
-        <div class="story-card">
-
-            <p>
-                AI adoption is often discussed as a potential driver of productivity,
-                efficiency, and business performance. This project examines whether
-                businesses reporting higher levels of AI adoption also show greater
-                revenue change.
-            </p>
-
-            <p>
-                Rather than relying only on a simple correlation, I progressively
-                expanded the regression model to determine whether the relationship
-                between AI adoption and revenue change remains after accounting for
-                other characteristics of the businesses in the dataset.
-            </p>
-
+        <div class="bar-track">
+            <div class="bar-fill" style="width: 30.9%;"></div>
         </div>
 
-
-        <div class="project-stats">
-
-            <div>
-
-                <strong>
-                    1,910
-                </strong>
-
-                <span>
-                    Original observations
-                </span>
-
-            </div>
+    </div>
 
 
-            <div>
+    <div class="bar-row">
 
-                <strong>
-                    1,905
-                </strong>
-
-                <span>
-                    Final observations
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    24.08%
-                </strong>
-
-                <span>
-                    Mean AI adoption
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    0.479
-                </strong>
-
-                <span>
-                    Pearson correlation
-                </span>
-
-            </div>
-
+        <div class="bar-label">
+            <span>Sector XX / Size F</span>
+            <strong>39.7%</strong>
         </div>
 
-
-        <p>
-            Five observations were removed during data preparation because of
-            missing values, leaving 1,905 observations for the regression analysis.
-        </p>
-
-    </section>
-
-
-
-    <!-- DATA AND METHOD -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                02 — DATA &amp; METHOD
-            </p>
-
-            <h2>
-                From Simple Relationship to Full Model
-            </h2>
-
+        <div class="bar-track">
+            <div class="bar-fill" style="width: 39.7%;"></div>
         </div>
 
-
-        <div class="content-grid two-column">
-
-            <div class="content-card">
-
-                <h3>
-                    Key Variables
-                </h3>
-
-                <p>
-                    The analysis focuses on AI adoption as the primary explanatory
-                    variable and revenue change as the outcome variable.
-                </p>
-
-                <p>
-                    Employee size, sector, and time period were added as control
-                    variables to determine whether the observed relationship between
-                    AI adoption and revenue change remained after accounting for
-                    differences across businesses.
-                </p>
-
-            </div>
+    </div>
 
 
-            <div class="content-card">
+    <div class="bar-row">
 
-                <h3>
-                    Analytical Approach
-                </h3>
-
-                <p>
-                    I estimated four progressively more complete ordinary least
-                    squares regression models. This makes it possible to see how the
-                    estimated AI coefficient changes as additional controls are
-                    introduced.
-                </p>
-
-                <p>
-                    The final model was also evaluated using clustered standard
-                    errors to account for potential correlation within sector and
-                    employee-size groups.
-                </p>
-
-            </div>
-
+        <div class="bar-label">
+            <span>Sector XX / Size G</span>
+            <strong>43.6%</strong>
         </div>
 
-
-        <div class="model-grid">
-
-            <div class="model-card">
-
-                <span>
-                    MODEL 1
-                </span>
-
-                <h3>
-                    AI Adoption Only
-                </h3>
-
-                <p>
-                    Establishes the basic relationship between AI adoption and
-                    revenue change without additional controls.
-                </p>
-
-            </div>
-
-
-            <div class="model-card">
-
-                <span>
-                    MODEL 2
-                </span>
-
-                <h3>
-                    + Employee Size
-                </h3>
-
-                <p>
-                    Controls for differences in business size.
-                </p>
-
-            </div>
-
-
-            <div class="model-card">
-
-                <span>
-                    MODEL 3
-                </span>
-
-                <h3>
-                    + Sector
-                </h3>
-
-                <p>
-                    Adds sector controls to account for differences across
-                    industries.
-                </p>
-
-            </div>
-
-
-            <div class="model-card">
-
-                <span>
-                    MODEL 4
-                </span>
-
-                <h3>
-                    Full Model
-                </h3>
-
-                <p>
-                    Controls for employee size, sector, and time period.
-                </p>
-
-            </div>
-
+        <div class="bar-track">
+            <div class="bar-fill" style="width: 43.6%;"></div>
         </div>
 
-    </section>
+    </div>
 
+</div>
 
 
-    <!-- VISUAL 1 -->
+<div class="story-card">
 
-    <section class="project-section">
+    <p>
+        These examples illustrate why a model based only on an overall
+        average would be insufficient. The expected percentage of businesses
+        reporting AI use varies meaningfully across the combinations of
+        sector and employee size.
+    </p>
 
-        <div class="section-header">
+    <p>
+        This variation motivated the use of multiple predictors rather than
+        relying on a single group-level average.
+    </p>
 
-            <p class="section-number">
-                03 — VISUAL ANALYSIS
-            </p>
+</div>
+```
 
-            <h2>
-                The Relationship Before Controls
-            </h2>
+</section>
 
-        </div>
+<!-- DATA PREPARATION -->
 
+<section class="project-section">
 
-        <div class="visual-block">
+```
+<div class="section-header">
 
-            <h3>
-                AI Adoption vs. Revenue Change
-            </h3>
+    <p class="section-number">
+        05 — DATA PREPARATION &amp; FEATURE SELECTION
+    </p>
 
-            <img
-                class="project-chart"
-                src="pc1.png"
-                alt="Regression line showing the relationship between AI adoption and revenue change"
-            >
+    <h2>
+        Preparing the Data for Modeling
+    </h2>
 
-            <div class="visual-copy">
+</div>
 
-                <p>
-                    The simple regression shows a positive relationship between
-                    AI adoption and revenue change. Businesses with higher AI
-                    adoption tend to have higher revenue-change scores in the
-                    unadjusted relationship.
-                </p>
 
-                <p>
-                    The Model 1 AI coefficient is 0.509 and is statistically
-                    significant at p &lt; 0.001. However, this model does not account
-                    for differences in business size, sector, or time period.
-                </p>
+<p>
+    Before training the model, the data were transformed into a format
+    suitable for machine learning. Numerical and categorical variables
+    were handled separately so that the final estimator could work with
+    both types of information.
+</p>
 
-            </div>
 
-        </div>
+<div class="content-grid two-column">
 
-    </section>
-
-
-
-    <!-- VISUAL 2 -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                04 — MODEL COMPARISON
-            </p>
-
-            <h2>
-                What Happens When Controls Are Added?
-            </h2>
-
-        </div>
-
-
-        <div class="visual-block">
-
-            <h3>
-                Model Fit: R² Across Four Models
-            </h3>
-
-            <img
-                class="project-chart"
-                src="pc2.png"
-                alt="Comparison of R-squared values across four regression models"
-            >
-
-            <div class="visual-copy">
-
-                <p>
-                    Model fit improves substantially as additional variables are
-                    introduced. R² increases from 0.227 in the AI-only model to
-                    0.619 in the full model.
-                </p>
-
-                <p>
-                    In other words, the full model explains approximately 61.9%
-                    of the variation in revenue change in the sample, compared
-                    with 22.7% for the model using AI adoption alone.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="visual-block">
-
-            <h3>
-                AI Coefficient Across Models
-            </h3>
-
-            <img
-                class="project-chart"
-                src="pc3.png"
-                alt="AI coefficient comparison across four regression models"
-            >
-
-            <div class="visual-copy">
-
-                <p>
-                    The most important pattern appears in the AI coefficient.
-                    The estimated relationship declines from 0.509 in Model 1
-                    to 0.345 after controlling for employee size, then to 0.259
-                    after adding sector controls.
-                </p>
-
-                <p>
-                    After adding employee size, sector, and period controls,
-                    the coefficient falls to 0.040.
-                </p>
-
-                <p>
-                    This large reduction suggests that much of the positive
-                    relationship observed in the simpler models is associated
-                    with differences captured by the additional control variables.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- FINAL MODEL -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                05 — FINAL MODEL
-            </p>
-
-            <h2>
-                Final Regression Results
-            </h2>
-
-        </div>
-
-
-        <div class="visual-block">
-
-            <h3>
-                Regression Summary
-            </h3>
-
-            <img
-                class="project-chart"
-                src="regsummary.png"
-                alt="Regression summary output for the final statistical model"
-            >
-
-            <div class="visual-copy">
-
-                <p>
-                    The final model includes AI adoption, employee size, sector,
-                    and time period. The estimated AI coefficient is 0.0404.
-                </p>
-
-                <p>
-                    The conventional OLS p-value is 0.2722, while the clustered
-                    standard-error p-value is 0.3566. Both results are above
-                    conventional statistical significance thresholds.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="callout">
-
-            <span class="callout-label">
-                FINAL RESULT
-            </span>
-
-            <p>
-                After controlling for employee size, sector, and time period,
-                the analysis does not provide statistically significant evidence
-                of an independent relationship between AI adoption and revenue
-                change.
-            </p>
-
-        </div>
-
-
-
-        <div class="visual-block">
-
-            <h3>
-                Final Summary Output
-            </h3>
-
-            <img
-                class="project-chart"
-                src="regsfinal.png"
-                alt="Final regression results and hypothesis test summary"
-            >
-
-        </div>
-
-    </section>
-
-
-
-    <!-- INTERPRETATION -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                06 — INTERPRETATION
-            </p>
-
-            <h2>
-                What the Analysis Suggests
-            </h2>
-
-        </div>
-
-
-        <div class="content-grid two-column">
-
-            <div class="content-card">
-
-                <h3>
-                    What We See
-                </h3>
-
-                <p>
-                    The descriptive and simpler regression results show a clear
-                    positive relationship between AI adoption and revenue change.
-                    Businesses with greater AI adoption tend to have higher
-                    revenue-change scores in the unadjusted analysis.
-                </p>
-
-            </div>
-
-
-            <div class="content-card">
-
-                <h3>
-                    What Changes
-                </h3>
-
-                <p>
-                    The estimated AI relationship becomes substantially smaller
-                    as employee size, sector, and period are introduced into the
-                    model. In the full model, the coefficient is small and not
-                    statistically significant.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="story-card">
-
-            <p>
-                The key finding is therefore not that AI adoption has no relationship
-                with business performance. Instead, the results show that the positive
-                relationship observed in the simpler models is not robust to the
-                additional controls included in this analysis.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- CONCLUSION -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                07 — CONCLUSION
-            </p>
-
-            <h2>
-                Conclusion
-            </h2>
-
-        </div>
-
-
-        <div class="callout">
-
-            <span class="callout-label">
-                MY TAKEAWAY
-            </span>
-
-            <p>
-                AI adoption is positively associated with revenue change in the
-                simpler models, but the relationship becomes small and statistically
-                insignificant after accounting for employee size, sector, and time.
-            </p>
-
-        </div>
-
-
-        <p>
-            The final model explains approximately 61.9% of the variation in revenue
-            change. However, the AI coefficient of 0.040 is not statistically significant,
-            with a clustered p-value of 0.357.
-        </p>
-
-        <p>
-            Therefore, this analysis does not provide sufficient evidence to conclude
-            that AI adoption independently explains changes in revenue after accounting
-            for the other factors included in the model.
-        </p>
+    <div class="content-card">
 
         <h3>
-            What This Analysis Does Not Establish
+            Categorical Variables
         </h3>
 
         <p>
-            This analysis does not establish that AI adoption causes revenue to increase
-            or decrease. Regression results from observational data can identify
-            statistical relationships, but they do not by themselves establish causation.
+            Categorical business characteristics, including sector and
+            employee-size categories, were encoded so that they could be
+            incorporated into the machine-learning pipeline.
         </p>
 
-        <p>
-            The findings should therefore be interpreted as evidence about the relationship
-            observed in this dataset rather than as proof of a causal effect of AI adoption
-            on business revenue.
-        </p>
-
-    </section>
+    </div>
 
 
-
-    <!-- LIMITATIONS -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                08 — LIMITATIONS &amp; REFLECTION
-            </p>
-
-            <h2>
-                Limitations &amp; Reflection
-            </h2>
-
-        </div>
-
-
-        <div class="reflection-grid">
-
-            <div class="reflection-card">
-
-                <h3>
-                    Sample
-                </h3>
-
-                <p>
-                    The analysis is based on the available observations after
-                    removing five records with missing values. The results therefore
-                    reflect the businesses and periods represented in the dataset.
-                </p>
-
-            </div>
-
-
-            <div class="reflection-card">
-
-                <h3>
-                    Model Controls
-                </h3>
-
-                <p>
-                    The final model controls for employee size, sector, and period,
-                    but other factors may influence revenue change. The results should
-                    not be interpreted as accounting for every possible business
-                    characteristic.
-                </p>
-
-            </div>
-
-
-            <div class="reflection-card">
-
-                <h3>
-                    Causality
-                </h3>
-
-                <p>
-                    The analysis identifies associations rather than causal effects.
-                    A positive relationship between AI adoption and revenue change
-                    in a simple model does not demonstrate that AI adoption caused
-                    the observed revenue changes.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="story-card">
-
-            <p>
-                One of the most important lessons from this project was how much the
-                interpretation changed as the model became more complete. The initial
-                relationship between AI adoption and revenue change appeared strong,
-                but that relationship became much smaller once other characteristics
-                of the businesses were considered.
-            </p>
-
-            <p>
-                This demonstrates why relying on a single correlation or simple
-                regression can be misleading when analyzing real-world business data.
-                Adding relevant controls can substantially change both the estimated
-                relationship and the conclusion.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- CODE AND TRANSPARENCY -->
-
-    <section class="project-section">
-
-        <div class="section-header">
-
-            <p class="section-number">
-                09 — CODE &amp; TRANSPARENCY
-            </p>
-
-            <h2>
-                Code &amp; Transparency
-            </h2>
-
-        </div>
-
-
-        <p>
-            The complete Python analysis used to clean the data, conduct the
-            descriptive analysis, estimate the regression models, evaluate
-            statistical significance, and create the visualizations is available
-            through the project repository.
-        </p>
-
-
-        <p>
-            The project uses Python and statistical analysis libraries to move
-            from data preparation through model estimation and visualization.
-            The analysis includes ordinary least squares regression as well as
-            robust and clustered standard-error approaches for the final model.
-        </p>
-
-
-        <div class="project-buttons">
-
-            <a
-                class="button primary"
-                href="analysis2.ipynb"
-            >
-                View Python Notebook
-            </a>
-
-        </div>
-
+    <div class="content-card">
 
         <h3>
-            AI Usage Disclosure
+            Numerical Variables
         </h3>
 
-
         <p>
-            Generative AI Disclosure: I used OpenAI ChatGPT as a support tool
-            during this project to help troubleshoot Python errors, explain
-            statistical concepts, assist with code development, and improve the
-            clarity and organization of the project presentation. I independently
-            selected the research question, evaluated the dataset, made analytical
-            decisions, executed and reviewed the Python analysis, evaluated the
-            resulting visualizations, and determined the final conclusions.
+            Numeric survey measures were retained as quantitative predictors
+            and processed through the modeling pipeline.
         </p>
 
-    </section>
+    </div>
 
 
+    <div class="content-card">
 
-    <!-- SOURCES -->
+        <h3>
+            Feature Selection
+        </h3>
 
-    <section class="project-section">
+        <p>
+            Features were selected based on their availability in the
+            modeling data and their potential relevance to business AI
+            adoption. The model's feature-importance results were then used
+            to examine which variables contributed most strongly to
+            prediction.
+        </p>
 
-        <div class="section-header">
+    </div>
 
-            <p class="section-number">
-                10 — SOURCES
-            </p>
 
-            <h2>
-                Data Sources
-            </h2>
+    <div class="content-card">
 
+        <h3>
+            Leakage Prevention
+        </h3>
+
+        <p>
+            Preprocessing and model fitting were structured so that the
+            predictive workflow could be evaluated without using the target
+            values from the evaluation process as input features.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="callout">
+
+    <span class="callout-label">
+        IMPORTANT MODELING DECISION
+    </span>
+
+    <p>
+        Because the three target percentages must describe one complete
+        distribution, predictions were validated after modeling to ensure
+        that each group remained interpretable as a 100% response
+        distribution.
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- BASELINE AND MODEL -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        06 — BASELINE &amp; MODEL DEVELOPMENT
+    </p>
+
+    <h2>
+        From a Simple Baseline to Gradient Boosting
+    </h2>
+
+</div>
+
+
+<p>
+    A baseline prediction provides a reference point for determining
+    whether the machine-learning model is actually learning useful
+    patterns. The baseline MAE was <strong>9.5053</strong>.
+</p>
+
+
+<div class="metric-grid">
+
+    <div class="metric-card">
+
+        <strong>
+            9.5053
+        </strong>
+
+        <span>
+            Baseline MAE
+        </span>
+
+    </div>
+
+
+    <div class="metric-card">
+
+        <strong>
+            2.1014
+        </strong>
+
+        <span>
+            Final model MAE
+        </span>
+
+    </div>
+
+
+    <div class="metric-card">
+
+        <strong>
+            77.89%
+        </strong>
+
+        <span>
+            Improvement over baseline
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="model-grid">
+
+    <div class="model-card">
+
+        <span>
+            BASELINE
+        </span>
+
+        <h3>
+            Reference Prediction
+        </h3>
+
+        <p>
+            The baseline provides a simple benchmark for prediction error.
+            It does not attempt to learn complex relationships between
+            business characteristics and AI adoption.
+        </p>
+
+    </div>
+
+
+    <div class="model-card">
+
+        <span>
+            FINAL MODEL
+        </span>
+
+        <h3>
+            Gradient Boosting
+        </h3>
+
+        <p>
+            Gradient Boosting was used as the final predictive model because
+            it can capture nonlinear relationships and interactions among
+            business characteristics without requiring those relationships
+            to be specified manually.
+        </p>
+
+    </div>
+
+</div>
+
+
+<p>
+    The final model reduced MAE from 9.5053 to 2.1014, an absolute
+    improvement of 7.4039 points and a relative improvement of 77.89%.
+</p>
+
+
+<p>
+    This means the final model's average absolute prediction error was
+    substantially smaller than the error produced by the baseline.
+</p>
+```
+
+</section>
+
+<!-- MODEL EVALUATION -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        07 — MODEL EVALUATION &amp; SELECTION
+    </p>
+
+    <h2>
+        How Well Did the Model Predict?
+    </h2>
+
+</div>
+
+
+<p>
+    Mean Absolute Error (MAE) was selected as the primary evaluation metric.
+    MAE measures the average absolute difference between the predicted
+    percentage and the observed percentage. Because the targets are
+    expressed as percentage points, MAE is straightforward to interpret.
+</p>
+
+
+<table class="performance-table">
+
+    <thead>
+
+        <tr>
+            <th>Evaluation</th>
+            <th>MAE</th>
+            <th>Interpretation</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Baseline</td>
+            <td>9.5053</td>
+            <td>Reference-level prediction error</td>
+        </tr>
+
+        <tr>
+            <td>Final model</td>
+            <td>2.1014</td>
+            <td>Substantially lower prediction error</td>
+        </tr>
+
+        <tr>
+            <td>Gradient Boosting cross-validation</td>
+            <td>4.9874</td>
+            <td>Out-of-sample validation estimate</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<div class="bar-chart">
+
+    <h3>
+        Prediction Error Compared With Baseline
+    </h3>
+
+
+    <div class="bar-row">
+
+        <div class="bar-label">
+            <span>Baseline MAE</span>
+            <strong>9.5053</strong>
         </div>
 
-
-        <div class="source-card">
-
-            <p>
-                U.S. Census Bureau. (n.d.). Business trends and outlook survey (BTOS): 
-                Data downloads. https://www.census.gov/hfp/btos/data_downloads
-            </p>
-
+        <div class="bar-track">
+            <div class="bar-fill" style="width: 100%;"></div>
         </div>
 
-    </section>
+    </div>
 
+
+    <div class="bar-row">
+
+        <div class="bar-label">
+            <span>Final Model MAE</span>
+            <strong>2.1014</strong>
+        </div>
+
+        <div class="bar-track">
+            <div class="bar-fill" style="width: 22.1%;"></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="callout">
+
+    <span class="callout-label">
+        MODEL SELECTION
+    </span>
+
+    <p>
+        Gradient Boosting substantially outperformed the baseline on the
+        available evaluation results, reducing the baseline error by
+        approximately 77.9%.
+    </p>
+
+</div>
+
+
+<p>
+    The cross-validation MAE of 4.9874 is higher than the final reported
+    model MAE of 2.1014. This difference is important because cross-validation
+    evaluates performance across held-out folds rather than measuring only
+    the predictions used in the final diagnostic output.
+</p>
+
+
+<p>
+    The cross-validation result therefore provides a more conservative
+    indication of how the model may perform on unseen data and is an
+    important consideration when interpreting the strength of the model.
+</p>
+```
+
+</section>
+
+<!-- TARGET PERFORMANCE -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        08 — TARGET-LEVEL PERFORMANCE
+    </p>
+
+    <h2>
+        Where Does the Model Perform Best?
+    </h2>
+
+</div>
+
+
+<p>
+    The model was also evaluated separately for each target category.
+    This matters because an overall MAE can hide differences in how well a
+    model predicts different parts of the response distribution.
+</p>
+
+
+<table class="performance-table">
+
+    <thead>
+
+        <tr>
+            <th>Target</th>
+            <th>Baseline MAE</th>
+            <th>Model MAE</th>
+            <th>Improvement</th>
+            <th>Improvement %</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Yes</td>
+            <td>10.6752</td>
+            <td>2.3099</td>
+            <td>8.3653</td>
+            <td>78.36%</td>
+        </tr>
+
+        <tr>
+            <td>No</td>
+            <td>13.2707</td>
+            <td>2.6224</td>
+            <td>10.6482</td>
+            <td>80.24%</td>
+        </tr>
+
+        <tr>
+            <td>Do not know</td>
+            <td>4.5700</td>
+            <td>1.3719</td>
+            <td>3.1981</td>
+            <td>69.98%</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<div class="story-card">
+
+    <p>
+        The model improved substantially over the baseline for all three
+        response categories. The largest relative improvement occurred for
+        the <strong>No</strong> category at 80.24%, followed by
+        <strong>Yes</strong> at 78.36%.
+    </p>
+
+    <p>
+        The <strong>Do not know</strong> category had the smallest relative
+        improvement at 69.98%, but its model MAE was also the lowest at
+        1.3719 percentage points.
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- MODEL INTERPRETATION -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        09 — MODEL INTERPRETATION
+    </p>
+
+    <h2>
+        What Did the Model Learn?
+    </h2>
+
+</div>
+
+
+<p>
+    Feature importance provides a way to examine which predictors contributed
+    most to the Gradient Boosting model's predictions. The results show that
+    several business-condition variables were more influential than the
+    categorical sector indicator.
+</p>
+
+
+<div class="importance-list">
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            AI/business activity measure — top numeric predictor
+        </div>
+
+        <div class="importance-value">
+            29.65%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Recent price-change measure
+        </div>
+
+        <div class="importance-value">
+            11.02%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Recent business-condition measure
+        </div>
+
+        <div class="importance-value">
+            10.72%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Recent business-condition measure
+        </div>
+
+        <div class="importance-value">
+            8.13%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Recent time-related business measure
+        </div>
+
+        <div class="importance-value">
+            8.06%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Additional business-condition measure
+        </div>
+
+        <div class="importance-value">
+            6.72%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Total/business activity measure
+        </div>
+
+        <div class="importance-value">
+            6.07%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Sector 51 indicator
+        </div>
+
+        <div class="importance-value">
+            4.77%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Current business description measure
+        </div>
+
+        <div class="importance-value">
+            2.58%
+        </div>
+
+    </div>
+
+
+    <div class="importance-item">
+
+        <div class="importance-name">
+            Additional price-change measure
+        </div>
+
+        <div class="importance-value">
+            2.53%
+        </div>
+
+    </div>
+
+</div>
+
+
+<p>
+    The strongest feature had an importance of approximately 0.2965,
+    considerably higher than the next group of predictors. This suggests
+    that the model relied heavily on one particular numeric business
+    measure when separating groups with different AI-use distributions.
+</p>
+
+
+<p>
+    Sector also contributed to the model, with the Sector 51 indicator
+    appearing among the top predictors at approximately 0.0477 importance.
+    This supports the idea that industry differences contain useful
+    predictive information, although the model relied on a combination of
+    business characteristics rather than sector alone.
+</p>
+
+
+<div class="callout">
+
+    <span class="callout-label">
+        INTERPRETATION CAUTION
+    </span>
+
+    <p>
+        Feature importance tells us which variables helped the model make
+        predictions. It does not establish that those variables cause AI
+        adoption.
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- ERROR ANALYSIS -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        10 — ERROR ANALYSIS
+    </p>
+
+    <h2>
+        Where Does the Model Miss?
+    </h2>
+
+</div>
+
+
+<p>
+    Row-level error analysis showed a mean MAE of <strong>1.6784</strong>
+    across the 89 evaluated groups and a median row MAE of
+    <strong>1.4979</strong>.
+</p>
+
+
+<p>
+    The largest observed row-level errors were concentrated in several
+    sector and employee-size combinations. The largest error was for
+    Sector 56 / Employee Size B, where the row MAE was 3.9417 percentage
+    points.
+</p>
+
+
+<table class="performance-table">
+
+    <thead>
+
+        <tr>
+            <th>Sector</th>
+            <th>Size</th>
+            <th>Observed Yes</th>
+            <th>Predicted Yes</th>
+            <th>Row MAE</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>56</td>
+            <td>B</td>
+            <td>16.6%</td>
+            <td>22.1%</td>
+            <td>3.94</td>
+        </tr>
+
+        <tr>
+            <td>42</td>
+            <td>E</td>
+            <td>38.6%</td>
+            <td>33.2%</td>
+            <td>3.72</td>
+        </tr>
+
+        <tr>
+            <td>51</td>
+            <td>D</td>
+            <td>61.9%</td>
+            <td>56.3%</td>
+            <td>3.71</td>
+        </tr>
+
+        <tr>
+            <td>56</td>
+            <td>E</td>
+            <td>30.1%</td>
+            <td>34.7%</td>
+            <td>3.68</td>
+        </tr>
+
+        <tr>
+            <td>52</td>
+            <td>D</td>
+            <td>33.8%</td>
+            <td>40.1%</td>
+            <td>3.64</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<div class="story-card">
+
+    <p>
+        The error analysis suggests that the model generally produces
+        reasonably close group-level estimates, but some sector and
+        employee-size combinations remain harder to predict.
+    </p>
+
+    <p>
+        The model's strongest performance should therefore not be interpreted
+        as meaning that every business group is predicted equally well.
+        Examining the largest errors helps identify where additional
+        variables or a different modeling strategy could improve future
+        predictions.
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- RESULTS -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        11 — RESULTS &amp; CONCLUSION
+    </p>
+
+    <h2>
+        What the Model Tells Us
+    </h2>
+
+</div>
+
+
+<div class="callout">
+
+    <span class="callout-label">
+        MY TAKEAWAY
+    </span>
+
+    <p>
+        Business characteristics contain meaningful predictive information
+        about AI adoption. The Gradient Boosting model reduced prediction
+        error by 77.89% compared with the baseline, but cross-validation
+        shows that performance on unseen data is more difficult than the
+        final diagnostic MAE alone suggests.
+    </p>
+
+</div>
+
+
+<p>
+    The strongest evidence comes from the comparison with the baseline.
+    The baseline MAE of 9.5053 fell to 2.1014 for the final model,
+    representing a 7.4039-point reduction in absolute error.
+</p>
+
+
+<p>
+    The model also performed substantially better than the baseline for
+    each target category. Prediction error for the Yes category fell by
+    78.36%, error for No fell by 80.24%, and error for Do not know fell
+    by 69.98%.
+</p>
+
+
+<p>
+    At the same time, the cross-validated MAE of 4.9874 provides an important
+    qualification. A model that performs very well on one evaluation output
+    may perform less accurately when repeatedly tested on held-out data.
+    This difference is one reason validation is essential in machine
+    learning.
+</p>
+
+
+<h3>
+    What This Analysis Does Not Establish
+</h3>
+
+
+<p>
+    The model does not demonstrate that any particular business characteristic
+    causes AI adoption. Feature importance identifies predictive usefulness,
+    not causal influence.
+</p>
+
+
+<p>
+    The results also should not be interpreted as an individual-business
+    prediction tool. The model operates on grouped survey data and predicts
+    percentages for combinations of business characteristics.
+</p>
+```
+
+</section>
+
+<!-- LIMITATIONS ETHICS -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        12 — LIMITATIONS, ETHICS &amp; REFLECTION
+    </p>
+
+    <h2>
+        Limitations &amp; Reflection
+    </h2>
+
+</div>
+
+
+<div class="reflection-grid">
+
+    <div class="reflection-card">
+
+        <h3>
+            Group-Level Data
+        </h3>
+
+        <p>
+            The model predicts aggregated response percentages for business
+            groups. It should not be interpreted as predicting whether a
+            particular individual company will adopt AI.
+        </p>
+
+    </div>
+
+
+    <div class="reflection-card">
+
+        <h3>
+            Survey Measurement
+        </h3>
+
+        <p>
+            BTOS is a survey-based source. Reported responses depend on how
+            businesses understand and answer the survey questions, and
+            survey measures may not capture every dimension of AI adoption.
+        </p>
+
+    </div>
+
+
+    <div class="reflection-card">
+
+        <h3>
+            Generalization
+        </h3>
+
+        <p>
+            The model was developed using the available dataset and 89
+            prediction groups. Performance may change when applied to a
+            different period, population, or distribution of business
+            characteristics.
+        </p>
+
+    </div>
+
+</div>
+
+
+<h3>
+    Potential Sources of Bias
+</h3>
+
+<p>
+    AI adoption may differ systematically across industries, business sizes,
+    regions, and types of organizations. If some groups are underrepresented
+    or measured differently, the model may learn those patterns unevenly.
+    Survey nonresponse and differences in how businesses interpret AI-related
+    questions may also affect the underlying target measurements.
+</p>
+
+
+<h3>
+    Consequences of Incorrect Predictions
+</h3>
+
+<p>
+    Incorrect predictions could lead a user to overestimate or underestimate
+    AI adoption in a particular business group. This could be especially
+    problematic if predictions were used to make investment, workforce,
+    policy, or resource-allocation decisions without considering uncertainty
+    and the limitations of the model.
+</p>
+
+
+<h3>
+    Reflection
+</h3>
+
+
+<div class="story-card">
+
+    <p>
+        One of the most important lessons from this project was that strong
+        predictive performance and trustworthy generalization are not the
+        same thing. The model dramatically improved on the baseline, but
+        cross-validation produced a higher MAE than the final diagnostic
+        result.
+    </p>
+
+    <p>
+        The project also reinforced the importance of looking beyond a single
+        performance score. Examining target-level error, row-level error,
+        and feature importance provided a much better understanding of how
+        the model was behaving.
+    </p>
+
+    <p>
+        If I continued this project, I would compare additional machine-
+        learning algorithms, perform more systematic hyperparameter tuning,
+        investigate the source of the largest prediction errors, and test
+        whether the model remains stable across different BTOS time periods.
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- CODE AND TRANSPARENCY -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        13 — CODE &amp; TRANSPARENCY
+    </p>
+
+    <h2>
+        Code &amp; Transparency
+    </h2>
+
+</div>
+
+
+<p>
+    The complete Python workflow is available through the project notebook.
+    The analysis includes data preparation, feature engineering, model
+    development, baseline comparison, cross-validation, prediction
+    validation, feature-importance analysis, and row-level error analysis.
+</p>
+
+
+<div class="project-buttons">
+
+    <a
+        class="button primary"
+        href="analysis2.ipynb"
+    >
+        View Python Notebook
+    </a>
+
+</div>
+
+
+<h3>
+    Reproducibility
+</h3>
+
+
+<p>
+    The final prediction output was validated to confirm that all 89
+    prediction groups were unique and that every group's predicted
+    response distribution summed to 100%.
+</p>
+
+
+<h3>
+    AI Usage Disclosure
+</h3>
+
+
+<p>
+    Generative AI Disclosure: I used OpenAI ChatGPT as a support tool during
+    this project to help troubleshoot Python errors, explain machine-learning
+    concepts, assist with code development, improve the organization of the
+    analysis, and improve the clarity of the project presentation.
+    I independently evaluated the dataset, made analytical decisions,
+    executed and reviewed the Python workflow, evaluated the resulting
+    model performance, and determined the conclusions presented here.
+</p>
+```
+
+</section>
+
+<!-- SOURCES -->
+
+<section class="project-section">
+
+```
+<div class="section-header">
+
+    <p class="section-number">
+        14 — SOURCES
+    </p>
+
+    <h2>
+        Data &amp; Supporting Research
+    </h2>
+
+</div>
+
+
+<div class="source-card">
+
+    <p>
+        <strong>U.S. Census Bureau.</strong> (2026).
+        <em>Business Trends and Outlook Survey (BTOS)</em>.
+        The Census Bureau uses BTOS to measure business conditions and
+        provides AI-related data covering business use of artificial
+        intelligence.
+    </p>
+
+    <p>
+        <a
+            href="https://www.census.gov/hfp/btos/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Census Bureau — Business Trends and Outlook Survey
+        </a>
+    </p>
+
+</div>
+
+
+<div class="source-card">
+
+    <p>
+        <strong>Bonney, K., Breaux, C., Buffington, C., Dinlersoz, E.,
+        Foster, L. S., Goldschlag, N., Haltiwanger, J. C., Kroff, Z., &
+        Savage, K.</strong> (2024).
+        <em>Tracking firm use of AI in real time: A snapshot from the
+        Business Trends and Outlook Survey</em>.
+        National Bureau of Economic Research Working Paper No. 32319.
+    </p>
+
+    <p>
+        <a
+            href="https://www.nber.org/papers/w32319"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            NBER Working Paper 32319
+        </a>
+    </p>
+
+</div>
+
+
+<div class="source-card">
+
+    <p>
+        <strong>OECD, Boston Consulting Group, &amp; INSEAD.</strong>
+        (2025).
+        <em>The adoption of artificial intelligence in firms: New evidence
+        for policymaking</em>. OECD Publishing.
+    </p>
+
+    <p>
+        <a
+            href="https://doi.org/10.1787/f9ef33c3-en"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            OECD — The Adoption of Artificial Intelligence in Firms
+        </a>
+    </p>
+
+</div>
+
+
+<div class="source-card">
+
+    <p>
+        <strong>Calvino, F., &amp; Fontanelli, L.</strong> (2023).
+        A portrait of AI adopters across countries: Firm characteristics,
+        assets' complementarities and productivity.
+        <em>OECD Science, Technology and Industry Working Papers,
+        2023/02</em>.
+    </p>
+
+    <p>
+        <a
+            href="https://doi.org/10.1787/0fb79bb9-en"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            OECD — A Portrait of AI Adopters Across Countries
+        </a>
+    </p>
+
+</div>
+
+
+<div class="source-card">
+
+    <p>
+        <strong>U.S. Census Bureau.</strong> (2026).
+        <em>Large firms with at least 20 employees biggest AI users</em>.
+        Census Bureau.
+    </p>
+
+    <p>
+        <a
+            href="https://www.census.gov/library/stories/2026/05/ai-use-businesses.html"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Census Bureau — AI Use by Businesses
+        </a>
+    </p>
+
+</div>
+```
+
+</section>
 
 </main>
-```
 
 </body>
 
