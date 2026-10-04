@@ -209,6 +209,55 @@
         font-size: 1.15rem;
     }
 
+    .model-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin: 30px 0;
+    }
+
+    .model-card {
+        background: #ffffff;
+        border: 1px solid #dfe3e8;
+        border-radius: 14px;
+        padding: 26px;
+    }
+
+    .model-card span {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #667085;
+        margin-bottom: 8px;
+    }
+
+    .model-card h3 {
+        margin: 0 0 12px;
+    }
+
+    .model-card p {
+        margin-bottom: 0;
+    }
+
+    .reflection-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .reflection-card {
+        background: #ffffff;
+        border: 1px solid #dfe3e8;
+        border-radius: 14px;
+        padding: 26px;
+    }
+
+    .reflection-card h3 {
+        margin: 0 0 14px;
+    }
+
     .project-buttons {
         display: flex;
         flex-wrap: wrap;
@@ -235,23 +284,6 @@
 
     .project-buttons .button:hover {
         opacity: 0.9;
-    }
-
-    .source-card {
-        background: #ffffff;
-        border: 1px solid #dfe3e8;
-        border-radius: 14px;
-        padding: 24px;
-        margin-bottom: 16px;
-        max-width: 930px;
-    }
-
-    .source-card p {
-        margin-bottom: 8px;
-    }
-
-    .source-card a {
-        word-break: break-word;
     }
 
     body {
@@ -281,9 +313,12 @@
         }
 
         .two-column,
+        .model-grid,
+        .reflection-grid,
         .project-stats {
             grid-template-columns: 1fr;
         }
+
     }
 
 </style>
@@ -294,6 +329,8 @@
 <body>
 
 ```
+<!-- NAVIGATION -->
+
 <nav>
 
     <div class="nav-container">
@@ -304,9 +341,13 @@
 
         <div class="nav-links">
 
-            <a href="../../index.html#about">About</a>
+            <a href="../../index.html#about">
+                About
+            </a>
 
-            <a href="../../index.html#projects">Projects</a>
+            <a href="../../index.html#projects">
+                Projects
+            </a>
 
             <a href="../../resume.pdf" target="_blank">
                 Resume
@@ -323,14 +364,849 @@
 
 </nav>
 
+
 <main class="project-page">
 
-    <!-- PROJECT CONTENT WILL BE ADDED HERE -->
+
+    <!-- HERO -->
+
+    <section class="project-hero">
+
+        <p class="eyebrow">
+            STATISTICAL ANALYSIS
+        </p>
+
+        <h1>
+            AI Adoption &amp; Business Revenue Change
+        </h1>
+
+        <p class="project-intro">
+            Does greater AI adoption correspond with changes in business revenue,
+            and does that relationship remain after accounting for employee size,
+            industry sector, and time period?
+        </p>
+
+        <div class="project-tags">
+
+            <span>Python</span>
+
+            <span>Pandas</span>
+
+            <span>Statistical Analysis</span>
+
+            <span>Regression</span>
+
+            <span>OLS</span>
+
+            <span>Robust Standard Errors</span>
+
+            <span>Clustered Standard Errors</span>
+
+            <span>Data Visualization</span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OVERVIEW -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                01 — PROJECT OVERVIEW
+            </p>
+
+            <h2>
+                Research Question
+            </h2>
+
+        </div>
+
+
+        <div class="research-question">
+
+            Is there a statistically significant relationship between AI adoption
+            and business revenue change after controlling for employee size,
+            sector, and time period?
+
+        </div>
+
+
+        <div class="story-card">
+
+            <p>
+                AI adoption is often discussed as a potential driver of productivity,
+                efficiency, and business performance. This project examines whether
+                businesses reporting higher levels of AI adoption also show greater
+                revenue change.
+            </p>
+
+            <p>
+                Rather than relying only on a simple correlation, I progressively
+                expanded the regression model to determine whether the relationship
+                between AI adoption and revenue change remains after accounting for
+                other characteristics of the businesses in the dataset.
+            </p>
+
+        </div>
+
+
+        <div class="project-stats">
+
+            <div>
+
+                <strong>
+                    1,910
+                </strong>
+
+                <span>
+                    Original observations
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    1,905
+                </strong>
+
+                <span>
+                    Final observations
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    24.08%
+                </strong>
+
+                <span>
+                    Mean AI adoption
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    0.479
+                </strong>
+
+                <span>
+                    Pearson correlation
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <p>
+            Five observations were removed during data preparation because of
+            missing values, leaving 1,905 observations for the regression analysis.
+        </p>
+
+    </section>
+
+
+
+    <!-- DATA AND METHOD -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                02 — DATA &amp; METHOD
+            </p>
+
+            <h2>
+                From Simple Relationship to Full Model
+            </h2>
+
+        </div>
+
+
+        <div class="content-grid two-column">
+
+            <div class="content-card">
+
+                <h3>
+                    Key Variables
+                </h3>
+
+                <p>
+                    The analysis focuses on AI adoption as the primary explanatory
+                    variable and revenue change as the outcome variable.
+                </p>
+
+                <p>
+                    Employee size, sector, and time period were added as control
+                    variables to determine whether the observed relationship between
+                    AI adoption and revenue change remained after accounting for
+                    differences across businesses.
+                </p>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <h3>
+                    Analytical Approach
+                </h3>
+
+                <p>
+                    I estimated four progressively more complete ordinary least
+                    squares regression models. This makes it possible to see how the
+                    estimated AI coefficient changes as additional controls are
+                    introduced.
+                </p>
+
+                <p>
+                    The final model was also evaluated using clustered standard
+                    errors to account for potential correlation within sector and
+                    employee-size groups.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="model-grid">
+
+            <div class="model-card">
+
+                <span>
+                    MODEL 1
+                </span>
+
+                <h3>
+                    AI Adoption Only
+                </h3>
+
+                <p>
+                    Establishes the basic relationship between AI adoption and
+                    revenue change without additional controls.
+                </p>
+
+            </div>
+
+
+            <div class="model-card">
+
+                <span>
+                    MODEL 2
+                </span>
+
+                <h3>
+                    + Employee Size
+                </h3>
+
+                <p>
+                    Controls for differences in business size.
+                </p>
+
+            </div>
+
+
+            <div class="model-card">
+
+                <span>
+                    MODEL 3
+                </span>
+
+                <h3>
+                    + Sector
+                </h3>
+
+                <p>
+                    Adds sector controls to account for differences across
+                    industries.
+                </p>
+
+            </div>
+
+
+            <div class="model-card">
+
+                <span>
+                    MODEL 4
+                </span>
+
+                <h3>
+                    Full Model
+                </h3>
+
+                <p>
+                    Controls for employee size, sector, and time period.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VISUAL 1 -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                03 — VISUAL ANALYSIS
+            </p>
+
+            <h2>
+                The Relationship Before Controls
+            </h2>
+
+        </div>
+
+
+        <div class="visual-block">
+
+            <h3>
+                AI Adoption vs. Revenue Change
+            </h3>
+
+            <img
+                class="project-chart"
+                src="pc1.png"
+                alt="Regression line showing the relationship between AI adoption and revenue change"
+            >
+
+            <div class="visual-copy">
+
+                <p>
+                    The simple regression shows a positive relationship between
+                    AI adoption and revenue change. Businesses with higher AI
+                    adoption tend to have higher revenue-change scores in the
+                    unadjusted relationship.
+                </p>
+
+                <p>
+                    The Model 1 AI coefficient is 0.509 and is statistically
+                    significant at p &lt; 0.001. However, this model does not account
+                    for differences in business size, sector, or time period.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VISUAL 2 -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                04 — MODEL COMPARISON
+            </p>
+
+            <h2>
+                What Happens When Controls Are Added?
+            </h2>
+
+        </div>
+
+
+        <div class="visual-block">
+
+            <h3>
+                Model Fit: R² Across Four Models
+            </h3>
+
+            <img
+                class="project-chart"
+                src="pc2.png"
+                alt="Comparison of R-squared values across four regression models"
+            >
+
+            <div class="visual-copy">
+
+                <p>
+                    Model fit improves substantially as additional variables are
+                    introduced. R² increases from 0.227 in the AI-only model to
+                    0.619 in the full model.
+                </p>
+
+                <p>
+                    In other words, the full model explains approximately 61.9%
+                    of the variation in revenue change in the sample, compared
+                    with 22.7% for the model using AI adoption alone.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="visual-block">
+
+            <h3>
+                AI Coefficient Across Models
+            </h3>
+
+            <img
+                class="project-chart"
+                src="pc3.png"
+                alt="AI coefficient comparison across four regression models"
+            >
+
+            <div class="visual-copy">
+
+                <p>
+                    The most important pattern appears in the AI coefficient.
+                    The estimated relationship declines from 0.509 in Model 1
+                    to 0.345 after controlling for employee size, then to 0.259
+                    after adding sector controls.
+                </p>
+
+                <p>
+                    After adding employee size, sector, and period controls,
+                    the coefficient falls to 0.040.
+                </p>
+
+                <p>
+                    This large reduction suggests that much of the positive
+                    relationship observed in the simpler models is associated
+                    with differences captured by the additional control variables.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FINAL MODEL -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                05 — FINAL MODEL
+            </p>
+
+            <h2>
+                Final Regression Results
+            </h2>
+
+        </div>
+
+
+        <div class="visual-block">
+
+            <h3>
+                Regression Summary
+            </h3>
+
+            <img
+                class="project-chart"
+                src="regsummary.png"
+                alt="Regression summary output for the final statistical model"
+            >
+
+            <div class="visual-copy">
+
+                <p>
+                    The final model includes AI adoption, employee size, sector,
+                    and time period. The estimated AI coefficient is 0.0404.
+                </p>
+
+                <p>
+                    The conventional OLS p-value is 0.2722, while the clustered
+                    standard-error p-value is 0.3566. Both results are above
+                    conventional statistical significance thresholds.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="callout">
+
+            <span class="callout-label">
+                FINAL RESULT
+            </span>
+
+            <p>
+                After controlling for employee size, sector, and time period,
+                the analysis does not provide statistically significant evidence
+                of an independent relationship between AI adoption and revenue
+                change.
+            </p>
+
+        </div>
+
+
+
+        <div class="visual-block">
+
+            <h3>
+                Final Summary Output
+            </h3>
+
+            <img
+                class="project-chart"
+                src="regsfinal.png"
+                alt="Final regression results and hypothesis test summary"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INTERPRETATION -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                06 — INTERPRETATION
+            </p>
+
+            <h2>
+                What the Analysis Suggests
+            </h2>
+
+        </div>
+
+
+        <div class="content-grid two-column">
+
+            <div class="content-card">
+
+                <h3>
+                    What We See
+                </h3>
+
+                <p>
+                    The descriptive and simpler regression results show a clear
+                    positive relationship between AI adoption and revenue change.
+                    Businesses with greater AI adoption tend to have higher
+                    revenue-change scores in the unadjusted analysis.
+                </p>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <h3>
+                    What Changes
+                </h3>
+
+                <p>
+                    The estimated AI relationship becomes substantially smaller
+                    as employee size, sector, and period are introduced into the
+                    model. In the full model, the coefficient is small and not
+                    statistically significant.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="story-card">
+
+            <p>
+                The key finding is therefore not that AI adoption has no relationship
+                with business performance. Instead, the results show that the positive
+                relationship observed in the simpler models is not robust to the
+                additional controls included in this analysis.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONCLUSION -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                07 — CONCLUSION
+            </p>
+
+            <h2>
+                Conclusion
+            </h2>
+
+        </div>
+
+
+        <div class="callout">
+
+            <span class="callout-label">
+                MY TAKEAWAY
+            </span>
+
+            <p>
+                AI adoption is positively associated with revenue change in the
+                simpler models, but the relationship becomes small and statistically
+                insignificant after accounting for employee size, sector, and time.
+            </p>
+
+        </div>
+
+
+        <p>
+            The final model explains approximately 61.9% of the variation in revenue
+            change. However, the AI coefficient of 0.040 is not statistically significant,
+            with a clustered p-value of 0.357.
+        </p>
+
+        <p>
+            Therefore, this analysis does not provide sufficient evidence to conclude
+            that AI adoption independently explains changes in revenue after accounting
+            for the other factors included in the model.
+        </p>
+
+        <h3>
+            What This Analysis Does Not Establish
+        </h3>
+
+        <p>
+            This analysis does not establish that AI adoption causes revenue to increase
+            or decrease. Regression results from observational data can identify
+            statistical relationships, but they do not by themselves establish causation.
+        </p>
+
+        <p>
+            The findings should therefore be interpreted as evidence about the relationship
+            observed in this dataset rather than as proof of a causal effect of AI adoption
+            on business revenue.
+        </p>
+
+    </section>
+
+
+
+    <!-- LIMITATIONS -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                08 — LIMITATIONS &amp; REFLECTION
+            </p>
+
+            <h2>
+                Limitations &amp; Reflection
+            </h2>
+
+        </div>
+
+
+        <div class="reflection-grid">
+
+            <div class="reflection-card">
+
+                <h3>
+                    Sample
+                </h3>
+
+                <p>
+                    The analysis is based on the available observations after
+                    removing five records with missing values. The results therefore
+                    reflect the businesses and periods represented in the dataset.
+                </p>
+
+            </div>
+
+
+            <div class="reflection-card">
+
+                <h3>
+                    Model Controls
+                </h3>
+
+                <p>
+                    The final model controls for employee size, sector, and period,
+                    but other factors may influence revenue change. The results should
+                    not be interpreted as accounting for every possible business
+                    characteristic.
+                </p>
+
+            </div>
+
+
+            <div class="reflection-card">
+
+                <h3>
+                    Causality
+                </h3>
+
+                <p>
+                    The analysis identifies associations rather than causal effects.
+                    A positive relationship between AI adoption and revenue change
+                    in a simple model does not demonstrate that AI adoption caused
+                    the observed revenue changes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="story-card">
+
+            <p>
+                One of the most important lessons from this project was how much the
+                interpretation changed as the model became more complete. The initial
+                relationship between AI adoption and revenue change appeared strong,
+                but that relationship became much smaller once other characteristics
+                of the businesses were considered.
+            </p>
+
+            <p>
+                This demonstrates why relying on a single correlation or simple
+                regression can be misleading when analyzing real-world business data.
+                Adding relevant controls can substantially change both the estimated
+                relationship and the conclusion.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CODE AND TRANSPARENCY -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                09 — CODE &amp; TRANSPARENCY
+            </p>
+
+            <h2>
+                Code &amp; Transparency
+            </h2>
+
+        </div>
+
+
+        <p>
+            The complete Python analysis used to clean the data, conduct the
+            descriptive analysis, estimate the regression models, evaluate
+            statistical significance, and create the visualizations is available
+            through the project repository.
+        </p>
+
+
+        <p>
+            The project uses Python and statistical analysis libraries to move
+            from data preparation through model estimation and visualization.
+            The analysis includes ordinary least squares regression as well as
+            robust and clustered standard-error approaches for the final model.
+        </p>
+
+
+        <div class="project-buttons">
+
+            <a
+                class="button primary"
+                href="analysis.ipynb"
+            >
+                View Python Notebook
+            </a>
+
+        </div>
+
+
+        <h3>
+            AI Usage Disclosure
+        </h3>
+
+
+        <p>
+            Generative AI Disclosure: I used OpenAI ChatGPT as a support tool
+            during this project to help troubleshoot Python errors, explain
+            statistical concepts, assist with code development, and improve the
+            clarity and organization of the project presentation. I independently
+            selected the research question, evaluated the dataset, made analytical
+            decisions, executed and reviewed the Python analysis, evaluated the
+            resulting visualizations, and determined the final conclusions.
+        </p>
+
+    </section>
+
+
+
+    <!-- SOURCES -->
+
+    <section class="project-section">
+
+        <div class="section-header">
+
+            <p class="section-number">
+                10 — SOURCES
+            </p>
+
+            <h2>
+                Data Sources
+            </h2>
+
+        </div>
+
+
+        <div class="source-card">
+
+            <p>
+                The underlying dataset and supporting documentation used for this
+                analysis are identified within the project notebook and accompanying
+                project files.
+            </p>
+
+        </div>
+
+    </section>
+
 
 </main>
 ```
 
 </body>
+
+</html>
 
 </html>
 
