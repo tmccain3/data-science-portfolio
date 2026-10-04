@@ -53,12 +53,15 @@
     <p class="eyebrow">CURRENT FOCUS</p>
 
     <h2>
-        AI Adoption & Business Revenue Change
+        Predicting Business AI Use
     </h2>
 
     <p>
-      Building and evaluating machine-learning models to predict business AI-use outcomes 
-      using business characteristics and recent operating conditions from the U.S. Business Trends and Outlook Survey..
+      <p>
+        Building and evaluating machine-learning models to predict the distribution
+      of reported AI-use outcomes across U.S. business sector and employment-size
+      groups using Census Business Trends and Outlook Survey data.
+      </p>
     </p>
 
     <div class="focus-stats">
@@ -74,8 +77,8 @@
         </div>
 
         <div>
-            <strong>5.16</strong> 
-            <span>Cross-Validated MAE</span>
+            <strong>4</strong> 
+            <span>Models Compared</span>
         </div>
 
     </div>
@@ -189,7 +192,8 @@
 <!-- FEATURED PROJECT -->
 <section class="section" id="featured-project">
 
-<p class="section-label">FEATURED PROJECT</p> <h2>AI Adoption &amp; Business Revenue Change</h2>
+<p class="section-label">FEATURED PROJECT</p> 
+  <h2>Predicting Business AI Use</h2>
 
 <div class="project-showcase">
 
@@ -205,9 +209,9 @@
   <div class="research-question">
     <span>PREDICTION PROBLEM</span>
     <strong>
-      Can business characteristics and recent operating conditions
-      predict whether businesses report using AI, not using AI, or
-      being uncertain about their AI use?
+      Can machine-learning models predict the percentage of businesses
+      within a sector and employee-size group that report using AI,
+      not using AI, or not knowing whether they use AI?
     </strong>
   </div>
 
@@ -215,8 +219,8 @@
     <span class="tag">Python</span>
     <span class="tag">Pandas</span>
     <span class="tag">Scikit-learn</span>
-    <span class="tag">Gradient Boosting</span>
-    <span class="tag">Decision Tree</span>
+    <span class="tag">Multi-Output Regression</span>
+    <span class="tag">Cross-Validation</span>
     <span class="tag">Model Evaluation</span>
   </div>
 
@@ -232,8 +236,8 @@
     <span>01</span>
     <h3>Prediction</h3>
     <p>
-      Predict three AI-use outcomes across 89 sector and employee-size
-      groups using business characteristics and operating conditions.
+      Predict three continuous AI-use percentages across 89 sector and
+      employee-size groups using business characteristics and survey measures.
     </p>
   </div>
 
@@ -241,9 +245,8 @@
     <span>02</span>
     <h3>Model Comparison</h3>
     <p>
-      Compare the final Gradient Boosting model with a Decision Tree
-      using cross-validation rather than relying only on training
-      performance.
+      Compare a mean baseline, Decision Tree, Random Forest, and Gradient
+      Boosting using the same five-fold cross-validation strategy.
     </p>
   </div>
 
@@ -251,12 +254,10 @@
     <span>03</span>
     <h3>Model Selection</h3>
     <p>
-      The existing final model performed better in cross-validation,
-      with a MAE of 5.16 compared with 6.70 for the Decision Tree.
+      Select the preferred trained model using the lowest cross-validated
+      Mean Absolute Error rather than relying only on training performance.
     </p>
   </div>
-
-</div>
 
 </div>
 
@@ -302,7 +303,7 @@
       <div class="detail-card">
         <span>01</span>
         <h3>Employment</h3>
-        <p>Compare growth patterns across occupations with different levels of AI exposure.</p>
+        <p>Compare current employment patterns across occupations with different levels of AI exposure..</p>
       </div>
 
       <div class="detail-card">
