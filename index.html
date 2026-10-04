@@ -57,25 +57,25 @@
     </h2>
 
     <p>
-      Examining whether AI adoption is associated with changes in 
-      business revenue after accounting for employee size, industry sector, and time period.
+      Building and evaluating machine-learning models to predict business AI-use outcomes 
+      using business characteristics and recent operating conditions from the U.S. Business Trends and Outlook Survey..
     </p>
 
     <div class="focus-stats">
 
         <div>
-            <strong>1,905</strong> 
-            <span>Observations</span>
+            <strong>89</strong> 
+            <span>Prediction Groups</span>
         </div>
 
         <div>
-            <strong>4</strong> 
-            <span>Regression Models</span>
+            <strong>3</strong> 
+            <span>Prediction Outcomes</span>
         </div>
 
         <div>
-            <strong>61.9%</strong> 
-            <span>Final Model R²</span>
+            <strong>5.16</strong> 
+            <span>Cross-Validated MAE</span>
         </div>
 
     </div>
@@ -189,73 +189,76 @@
 <!-- FEATURED PROJECT -->
 <section class="section" id="featured-project">
 
-  <p class="section-label">FEATURED PROJECT</p>
-  <h2>AI Adoption & Business Revenue Change</h2>
+<p class="section-label">FEATURED PROJECT</p> <h2>AI Adoption &amp; Business Revenue Change</h2>
 
-  <div class="project-showcase">
+<div class="project-showcase">
 
-    <div class="project-copy">
+<div class="project-copy">
 
-      <p>
-        Analyzing whether AI adoption is associated with changes in business
-        revenue after accounting for differences in employee size, industry
-        sector, and time period.
-      </p>
+  <p>
+    A machine-learning project using business survey data to predict
+    reported AI-use outcomes. The analysis moves from data preparation
+    and exploratory analysis through baseline modeling, model comparison,
+    cross-validation, error analysis, and model interpretation.
+  </p>
 
-      <div class="research-question">
-        <span>RESEARCH QUESTION</span>
-        <strong>
-          Is AI adoption associated with revenue change after controlling
-          for employee size, sector, and time period?
-        </strong>
-      </div>
-
-      <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">Statsmodels</span>
-        <span class="tag">Regression Analysis</span>
-        <span class="tag">Data Visualization</span>
-      </div>
-
-      <a href="projects/ai-business-revenue/" class="button primary">
-        View Full Project
-      </a>
-
-    </div>
-
-    <div class="project-details">
-
-      <div class="detail-card">
-        <span>01</span>
-        <h3>AI Adoption</h3>
-        <p>
-          Examine the relationship between AI adoption and business
-          revenue change.
-        </p>
-      </div>
-
-      <div class="detail-card">
-        <span>02</span>
-        <h3>Regression Models</h3>
-        <p>
-          Compare increasingly controlled models to determine how the
-          estimated AI relationship changes.
-        </p>
-      </div>
-
-      <div class="detail-card">
-        <span>03</span>
-        <h3>Key Finding</h3>
-        <p>
-          The positive relationship in simpler models becomes small and
-          statistically insignificant after adding controls.
-        </p>
-      </div>
-
-    </div>
-
+  <div class="research-question">
+    <span>PREDICTION PROBLEM</span>
+    <strong>
+      Can business characteristics and recent operating conditions
+      predict whether businesses report using AI, not using AI, or
+      being uncertain about their AI use?
+    </strong>
   </div>
+
+  <div class="project-tags">
+    <span class="tag">Python</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">Scikit-learn</span>
+    <span class="tag">Gradient Boosting</span>
+    <span class="tag">Decision Tree</span>
+    <span class="tag">Model Evaluation</span>
+  </div>
+
+  <a href="projects/ai-business-revenue/" class="button primary">
+    View Full Project
+  </a>
+
+</div>
+
+<div class="project-details">
+
+  <div class="detail-card">
+    <span>01</span>
+    <h3>Prediction</h3>
+    <p>
+      Predict three AI-use outcomes across 89 sector and employee-size
+      groups using business characteristics and operating conditions.
+    </p>
+  </div>
+
+  <div class="detail-card">
+    <span>02</span>
+    <h3>Model Comparison</h3>
+    <p>
+      Compare the final Gradient Boosting model with a Decision Tree
+      using cross-validation rather than relying only on training
+      performance.
+    </p>
+  </div>
+
+  <div class="detail-card">
+    <span>03</span>
+    <h3>Model Selection</h3>
+    <p>
+      The existing final model performed better in cross-validation,
+      with a MAE of 5.16 compared with 6.70 for the Decision Tree.
+    </p>
+  </div>
+
+</div>
+
+</div>
 
 </section>
 <section class="section" id="projects">
